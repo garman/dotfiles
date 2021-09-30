@@ -19,24 +19,30 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 call plug#end()
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set visualbell
 set expandtab
 set runtimepath+=$GOROOT/misc/vim
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-filetype plugin indent on
+autocmd Filetype go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+
 syntax on
+
+set undofile
+set undodir=~/.vim/undodir
+
+filetype plugin indent on
+
+" Allow backspace to delete indentation and inserted text
+" i.e. how it works in most programs
+set backspace=indent,eol,start
 
 :nmap \l :setlocal number!<CR>
 :nmap \0 :set paste!<CR>
 
 :set number
 :imap jk <Esc>
-map <F2> :w<CR>
-map <F3> :q<CR>
-map <C-p> :Files<CR>
 nmap :wc :w<space>!ruby<space>-c
 nmap ;wc :w<space>!ruby<space>-c
 nmap <silent> <F4> :NERDTreeToggle<CR>
