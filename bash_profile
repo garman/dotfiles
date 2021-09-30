@@ -26,3 +26,5 @@ alias gsp="git stash pop"
 alias gcsv="git commit -S -v"
 alias gcsa="git commit -S --amend"
 alias branch="git branch --sort=-committerdate"
+
+exec /bin/zsh
