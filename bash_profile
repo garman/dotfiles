@@ -39,3 +39,5 @@ alias bt="bin/rails test"
 alias btc="bin/rails test_changes"
 alias rspec="bin/rspec"
 alias dbm="bin/rake db:migrate db:test:prepare"
+
+exec /bin/zsh
