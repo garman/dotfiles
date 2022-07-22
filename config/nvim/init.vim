@@ -3,7 +3,6 @@ filetype off                  " required
 
 set linespace=5
 set number
-set relativenumber
 set completeopt-=preview
 set mouse+=a
 set autoread
@@ -28,9 +27,13 @@ set nolist
 set lazyredraw
 set ttyfast
 set clipboard=unnamed
-set colorcolumn=0
+set ignorecase
+set smartcase
 " set hlsearch
 nnoremap <F3> :set hlsearch!<CR>
+
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%101v', 100)
 
 set backupdir=/tmp//
 set directory=/tmp//
@@ -53,7 +56,9 @@ Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
 Plug 'KurtPreston/vim-autoformat-rails'
 Plug 'airblade/vim-gitgutter'
 Plug 'mdempsky/gocode'
@@ -61,7 +66,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-test/vim-test'
 Plug 'voldikss/vim-floaterm'
 Plug 'vim-ruby/vim-ruby'
-" Plug 'vim-airline/vim-airline'
 Plug 'wojciechkepka/vim-github-dark'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -70,47 +74,26 @@ Plug 'github/copilot.vim'
 Plug 'doums/darcula'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
-Plug 'josebalius/vim-github-colorscheme'
 Plug 'YorickPeterse/vim-paper'
 Plug 'morhetz/gruvbox'
-Plug 'kkga/vim-envy'
 Plug 'fatih/molokai'
-Plug 'tpope/vim-vividchalk'
 Plug 'ojroques/vim-oscyank'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'robertmeta/nofrils'
 
 call plug#end()
 
 filetype plugin indent on
 
-colorscheme vividchalk
-highlight StatusLine guibg=#FFFFFF guifg=#000000
-
-" colorscheme nofrils-dark
-" highlight Normal guibg=black ctermbg=black
-
-" lua require('github-theme').setup()
-" colorscheme nord
-
-" colorscheme paper
-" let g:airline_theme='sol'
-" let $BAT_THEME = 'GitHub'
-
-
-" let g:molokai_original=1
-" set background=dark
-" colorscheme molokai
-" let g:airline_theme='dark'
+let g:molokai_original=1
+set background=dark
+colorscheme molokai
+let g:airline_theme='dark'
 
 " colorscheme envy
 " let g:airline_theme='sol'
 " highlight Normal ctermbg=white guibg=white
-
-" colorscheme github
-" highlight SignColumn guibg=#eeeeee
 
 " colorscheme xcodelighthc
 " hi MatchParen guifg=#1f1f24 guibg=#fef937 gui=NONE cterm=NONE
@@ -131,7 +114,8 @@ highlight StatusLine guibg=#FFFFFF guifg=#000000
 " let g:codedark_conservative = 1
 " colorscheme codedark
 
-map ; :Files<CR>
+map ;; :Files<CR>
+map <Space> :nohl<CR>
 noremap ft :Tags<CR>
 noremap fd :Ag<CR>
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
@@ -164,10 +148,7 @@ noremap <Leader>t :<C-u>tabnew<CR>
 noremap <Leader>w :w<CR>
 noremap <Leader>im :GoImplements<CR>
 noremap <Leader>c :GoCallers<CR>
-
-
-
-
+nnoremap ; :
 
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 nnoremap <Leader>* :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
@@ -212,6 +193,11 @@ let g:go_fmt_command = "goimports"
 let g:go_doc_popup_window = 1
 let g:go_code_completion_enabled = 1
 
+" https://github.com/junegunn/vim-easy-align
+" vipga=
+xmap ga <Plug>(EasyAlign)
+" gaip=
+nmap ga <Plug>(EasyAlign)
 
 let g:OmniSharp_highlighting = 0
 augroup omnisharp_commands
