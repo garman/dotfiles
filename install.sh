@@ -50,7 +50,9 @@ nvim +'PlugInstall --sync' +qa
 
 vim -Es -u $HOME/.vimrc -c "PlugInstall | qa"
 
-sudo chsh -s "$(which zsh)" "$(whoami)"
+exec /bin/zsh
+
+# sudo chsh -s "$(which zsh)" "$(whoami)"
 
 # exec > >(tee -i $HOME/dotfiles_install.log)
 # exec 2>&1
