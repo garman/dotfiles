@@ -50,6 +50,8 @@ nvim +'PlugInstall --sync' +qa
 
 vim -Es -u $HOME/.vimrc -c "PlugInstall | qa"
 
+mv garman.zsh-theme ~/.oh-my-zsh/themes/
+
 sudo chsh -s "$(which zsh)" "$(whoami)"
 
 # exec > >(tee -i $HOME/dotfiles_install.log)
