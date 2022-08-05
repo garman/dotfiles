@@ -1,0 +1,6 @@
+[alias]
+  co = checkout
+  sno = show --name-only HEAD
+  lg = log --color --graph --pretty=format: '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[commit]
+  template = ~/.gitmessage
