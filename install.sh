@@ -6,7 +6,6 @@ set -x
 
 # Install curl, tar, git, other dependencies if missing
 PACKAGES_NEEDED="\
-    silversearcher-ag \
     bat \
     fuse \
     dialog \
@@ -21,7 +20,7 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
-# sudo apt-get --assume-yes install silversearcher-ag bat fuse
+sudo apt-get --assume-yes install silversearcher-ag fuse
 
 # install latest neovim
 sudo modprobe fuse
