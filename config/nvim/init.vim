@@ -90,6 +90,7 @@ let g:molokai_original=1
 set background=dark
 colorscheme molokai
 let g:airline_theme='dark'
+let g:copilot_node_command = '/usr/local/.nodenv/versions/16.0.0/bin/node'
 
 " colorscheme envy
 " let g:airline_theme='sol'

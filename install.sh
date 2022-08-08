@@ -50,6 +50,9 @@ rm -rf $HOME/.config
 mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 
+git clone https://github.com/nodenv/node-build.get $NODENV_ROOT/plugins/node-build
+nodenv install 16.0.0
+
 nvim +'PlugInstall --sync' +qa
 
 vim -Es -u $HOME/.vimrc -c "PlugInstall | qa"
