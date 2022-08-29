@@ -6,7 +6,6 @@ set -x
 
 # Install curl, tar, git, other dependencies if missing
 PACKAGES_NEEDED="\
-    silversearcher-ag \
     bat \
     fuse \
     dialog \
@@ -21,7 +20,7 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
-# sudo apt-get --assume-yes install silversearcher-ag bat fuse
+sudo apt-get --assume-yes install silversearcher-ag fuse
 
 # install latest neovim
 sudo modprobe fuse
@@ -41,16 +40,41 @@ ln -s $(pwd)/screenrc $HOME/.screenrc
 rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
 ln -s $(pwd)/gitmessage $HOME/.gitmessage
+ln -s $(pwd)/gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/gh
 ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
 ln -s $(pwd)/bash_profile $HOME/.bash_profile
+git config commit.gpgsign true
 
 rm -rf $HOME/.config
 mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 
+git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/node-build
+nodenv install 16.0.0
+
 nvim +'PlugInstall --sync' +qa
 
 vim -Es -u $HOME/.vimrc -c "PlugInstall | qa"
 
-exec /bin/zsh
+mv garman.zsh-theme ~/.oh-my-zsh/themes/
+
+sudo chsh -s "$(which zsh)" "$(whoami)"
+
+# exec > >(tee -i $HOME/dotfiles_install.log)
+# exec 2>&1
+# set -x
+#
+# ln -s $(pwd)/vimrc $HOME/.vimrc
+# ln -s $(pwd)/vim $HOME/.vim
+# ln -s $(pwd)/gitmessage $HOME/.gitmessage
+# mkdir -p $HOME/.config/gh
+# ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
+# rm -f $HOME/.zshrc
+# ln -s $(pwd)/zshrc $HOME/.zshrc
+# ln -s $(pwd)/bash_profile $HOME/.bash_profile
+#
+# sudo apt-get --assume-yes install silversearcher-ag bat
+# vim -Es -u $HOME/.vimrc -c "PlugInstall | qa"
+#
+# sudo chsh -s "$(which zsh)" "$(whoami)"
