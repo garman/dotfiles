@@ -53,7 +53,7 @@ Plug 'tpope/vim-rails'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-sensible'
 Plug 'preservim/nerdtree'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -68,7 +68,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wojciechkepka/vim-github-dark'
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'github/copilot.vim'
 Plug 'doums/darcula'
