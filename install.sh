@@ -32,6 +32,11 @@ unzip appimage.zip
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
+# Install tmux
+wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
+sudo chmod u+x tmux.appimage
+sudo mv tmux.appimage /usr/local/bin/tmux
+
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/vimrc $HOME/.vimrc
 ln -s $(pwd)/vim $HOME/.vim
