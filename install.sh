@@ -49,6 +49,7 @@ ln -s $(pwd)/gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/gh
 ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
 ln -s $(pwd)/bash_profile $HOME/.bash_profile
+ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 git config commit.gpgsign true
 
 rm -rf $HOME/.config
