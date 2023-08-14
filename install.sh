@@ -26,7 +26,7 @@ sudo apt-get --assume-yes install silversearcher-ag fuse
 sudo modprobe fuse
 sudo groupadd fuse
 sudo usermod -a -G fuse "$(whoami)"
-wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim.appimage
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 wget https://github.com/github/copilot.vim/releases/download/neovim-nightlies/appimage.zip
