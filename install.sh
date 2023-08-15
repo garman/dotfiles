@@ -61,9 +61,12 @@ ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/node-build
 nodenv install 16.0.0
 
-nvim +'PlugInstall --sync' +qa
+### Install vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-vim -Es -u $HOME/.vimrc -c "PlugInstall | qa"
+### Install NeoVim plugins
+nvim --headless +PlugInstall +qa
 
 mv garman.zsh-theme ~/.oh-my-zsh/themes/
 
