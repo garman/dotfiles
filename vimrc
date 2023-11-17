@@ -30,6 +30,7 @@ set ttyfast
 set clipboard=unnamed
 set hlsearch
 nnoremap <F3> :set hlsearch!<CR>
+nnoremap <F4> :NERDTreeToggle<CR>
 
 set backupdir=/tmp//
 set directory=/tmp//
