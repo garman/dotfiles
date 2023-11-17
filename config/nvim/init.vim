@@ -84,6 +84,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
