@@ -82,14 +82,17 @@ Plug 'ojroques/vim-oscyank'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'sainnhe/gruvbox-material'
 
 call plug#end()
 
 filetype plugin indent on
 
-let g:molokai_original=1
 set background=dark
-colorscheme molokai
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
+
 let g:airline_theme='dark'
 let g:copilot_node_command = '/usr/local/.nodenv/versions/16.0.0/bin/node'
 
