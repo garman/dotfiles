@@ -11,6 +11,7 @@ alias psgrep="ps aux | grep"
 
 # git
 alias gs="git status"
+alias gsr="git status -vv -s | cut -c4- | xargs rubocop"
 alias ga="git add ."
 alias gaa="git add --all"
 alias lg="git lg"
