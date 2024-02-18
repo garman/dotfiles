@@ -185,10 +185,6 @@ let g:oscyank_term = 'tmux'
 
 " let g:coc_global_extensions = ['coc-go', 'coc-yank']
 
-
-
-let g:airline_section_b=''
-let g:airline_section_c='%f'
 let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#tabline#tabs_label = ''
 let airline#extensions#tabline#show_splits = 0
