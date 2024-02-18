@@ -35,7 +35,7 @@ nnoremap <F4> :NERDTreeToggle<CR>
 autocmd VimEnter * NERDTree | wincmd p
 
 highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%101v', 100)
+call matchadd('ColorColumn', '\%101v', 118)
 
 set backupdir=/tmp//
 set directory=/tmp//
