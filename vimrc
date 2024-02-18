@@ -196,7 +196,6 @@ noremap tn :TestNearest<CR>
 
 let g:vimrubocop_config = '~/github/github/.rubocop.yml'
 let g:neocomplete#enable_at_startup = 1
-let NERDTreeShowHidden=1
 let g:ycm_max_num_candidates = 10
 let g:ycm_key_list_stop_completion = ['<UP>', '<LeftMouse>']
 let g:ycm_filetype_blacklist = { 'go': 1 }
