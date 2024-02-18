@@ -32,7 +32,7 @@ set smartcase
 " set hlsearch
 nnoremap <F3> :set hlsearch!<CR>
 nnoremap <F4> :NERDTreeToggle<CR>
-autocmd VimEnter * if argc() | wincmd p | endif
+autocmd VimEnter * NERDTree | wincmd p
 
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%101v', 100)
