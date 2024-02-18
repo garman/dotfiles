@@ -34,9 +34,6 @@ nnoremap <F3> :set hlsearch!<CR>
 nnoremap <F4> :NERDTreeToggle<CR>
 autocmd VimEnter * NERDTree | wincmd p
 
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%101v', 118)
-
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
@@ -94,6 +91,9 @@ set background=dark
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_better_performance = 1
 colorscheme gruvbox-material
+
+highlight colorcolumn ctermbg=white guibg=white
+call matchadd('ColorColumn', '\%119v', 100)
 
 let g:airline_theme='dark'
 let g:copilot_node_command = '/usr/local/.nodenv/versions/16.0.0/bin/node'
