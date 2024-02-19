@@ -11,6 +11,7 @@ PACKAGES_NEEDED="\
     dialog \
     apt-utils \
     exuberant-ctags \
+    tmux \
     libfuse2"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
@@ -24,21 +25,9 @@ fi
 sudo apt-get --assume-yes install silversearcher-ag fuse
 
 # install latest neovim
-sudo modprobe fuse
-sudo groupadd fuse
-sudo usermod -a -G fuse "$(whoami)"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
-wget https://github.com/github/copilot.vim/releases/download/neovim-nightlies/appimage.zip
-unzip appimage.zip
-sudo chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
-
-# Install tmux
-wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
-sudo chmod u+x tmux.appimage
-sudo mv tmux.appimage /usr/local/bin/tmux
 
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/vimrc $HOME/.vimrc
