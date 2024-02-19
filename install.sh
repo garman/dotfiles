@@ -10,6 +10,7 @@ PACKAGES_NEEDED="\
     fuse \
     dialog \
     apt-utils \
+    exuberant-ctags \
     libfuse2"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
