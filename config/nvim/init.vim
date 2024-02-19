@@ -68,7 +68,6 @@ Plug 'voldikss/vim-floaterm'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wojciechkepka/vim-github-dark'
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'github/copilot.vim'
 Plug 'doums/darcula'
@@ -83,6 +82,12 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'dense-analysis/ale'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 call plug#end()
 
@@ -148,7 +153,6 @@ noremap tn :TestNearest<CR>
 let test#strategy='floaterm'
 let g:floaterm_wintype='split'
 
-nmap <silent> gd <Plug>(coc-definition)
 noremap <Leader>q :q<CR>
 noremap <Leader>w :w<CR>
 nnoremap ; :
@@ -184,5 +188,3 @@ noremap <Leader>b :w<CR>:GoBuild<CR>
 let g:go_fmt_command = "goimports"
 let g:go_doc_popup_window = 1
 let g:go_code_completion_enabled = 1
-
-let g:coc_global_extensions = ['coc-go', 'coc-yank']
