@@ -58,9 +58,6 @@ rm -rf $HOME/.config
 mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 
-git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/node-build
-nodenv install 16.0.0
-
 ### Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

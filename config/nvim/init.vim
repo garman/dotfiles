@@ -70,7 +70,7 @@ Plug 'wojciechkepka/vim-github-dark'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'arcticicestudio/nord-vim'
-Plug 'zbirenbaum/copilot.lua'
+Plug 'github/copilot.vim'
 Plug 'doums/darcula'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
