@@ -126,7 +126,7 @@ noremap tt :<C-u>split<CR>
 noremap fi :BLines<CR>
 noremap cl :q<CR>
 
-# Comment lines
+" Comment lines
 noremap <C-c> :<C-u>'<,'>Commentary<CR>
 
 " Moving from pane to pane with CTRL+{vim keys}
