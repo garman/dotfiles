@@ -30,18 +30,16 @@ sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
-ln -s $(pwd)/vimrc $HOME/.vimrc
+# ln -s $(pwd)/vimrc $HOME/.vimrc
 ln -s $(pwd)/vim $HOME/.vim
-ln -s $(pwd)/emacs $HOME/.emacs
-ln -s $(pwd)/screenrc $HOME/.screenrc
+
 rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
 ln -s $(pwd)/gitmessage $HOME/.gitmessage
 ln -s $(pwd)/gitconfig $HOME/.gitconfig
+ln -s $(pwd)/bash_profile $HOME/.bash_profile
 mkdir -p $HOME/.config/gh
 ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
-ln -s $(pwd)/bash_profile $HOME/.bash_profile
-ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 git config commit.gpgsign true
 
 rm -rf $HOME/.config

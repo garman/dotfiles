@@ -92,7 +92,6 @@ call plug#end()
 filetype plugin indent on
 
 " A bunch of theme/color stuff
-set background=dark
 colorscheme github_dark_high_contrast
 
 " Highlight the 119th character in white. 118 is max line length
