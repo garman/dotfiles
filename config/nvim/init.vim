@@ -75,12 +75,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
 Plug 'YorickPeterse/vim-paper'
-Plug 'morhetz/gruvbox'
 Plug 'fatih/molokai'
 Plug 'ojroques/vim-oscyank'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'sainnhe/gruvbox-material'
 Plug 'dense-analysis/ale'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -95,9 +93,7 @@ filetype plugin indent on
 
 " A bunch of theme/color stuff
 set background=dark
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_better_performance = 1
-colorscheme gruvbox-material
+colorscheme github_dark_high_contrast
 
 " Highlight the 119th character in white. 118 is max line length
 highlight colorcolumn ctermbg=white guibg=white
