@@ -79,6 +79,21 @@ _G.packer_plugins = {
     path = "/home/codespace/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  fzf = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
+  ["fzf-lua"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    url = "https://github.com/ibhagwan/fzf-lua"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/codespace/.local/share/nvim/site/pack/packer/start/packer.nvim",

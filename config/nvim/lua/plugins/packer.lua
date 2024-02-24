@@ -25,5 +25,7 @@ return packer.startup(function()
     requires = { "nvim-tree/nvim-web-devicons" }
   }
   use { "junegunn/fzf", run = "./install --bin" }
+  use "christoomey/vim-tmux-navigator"
+  use "github/copilot.vim"
   use "wbthomason/packer.nvim"
 end)
