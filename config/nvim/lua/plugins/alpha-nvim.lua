@@ -58,7 +58,18 @@ local garman_splash = {
 "                                       ",
 }
 
-dashboard.section.header.val = garman_splash
+local turbo_time_splash = {
+" 							",
+" ▄▄▄▄▄▄• ▄▌▄▄▄  ▄▄▄▄·           ▄▄▄▄▄▪  • ▌ ▄ ·. ▄▄▄ . ",
+" •██  █▪██▌▀▄ █·▐█ ▀█▪▪         •██  ██ ·██ ▐███▪▀▄.▀· ",
+"  ▐█.▪█▌▐█▌▐▀▀▄ ▐█▀▀█▄ ▄█▀▄      ▐█.▪▐█·▐█ ▌▐▌▐█·▐▀▀▪▄ ",
+"  ▐█▌·▐█▄█▌▐█•█▌██▄▪▐█▐█▌.▐▌     ▐█▌·▐█▌██ ██▌▐█▌▐█▄▄▌ ",
+"  ▀▀▀  ▀▀▀ .▀  ▀·▀▀▀▀  ▀█▄▀▪     ▀▀▀ ▀▀▀▀▀  █▪▀▀▀ ▀▀▀  ",
+"                                                       ",
+"            Has that ever happened to you?             ",
+}
+
+dashboard.section.header.val = turbo_time_splash
 
 dashboard.section.buttons.val = {
   dashboard.button("e", "New file", ":ene <BAR> startinsert<CR>"),
