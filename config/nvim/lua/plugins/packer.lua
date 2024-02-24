@@ -22,4 +22,7 @@ end
 return packer.startup(function()
   use "goolord/alpha-nvim"
   use "wbthomason/packer.nvim"
+  use "nvim-lua/plenary.nvim"
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-treesitter/nvim-treesitter"
 end)

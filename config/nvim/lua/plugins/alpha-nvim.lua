@@ -59,21 +59,22 @@ local garman_splash = {
 }
 
 local turbo_time_splash = {
-" 							",
-" ▄▄▄▄▄▄• ▄▌▄▄▄  ▄▄▄▄·           ▄▄▄▄▄▪  • ▌ ▄ ·. ▄▄▄ . ",
-" •██  █▪██▌▀▄ █·▐█ ▀█▪▪         •██  ██ ·██ ▐███▪▀▄.▀· ",
-"  ▐█.▪█▌▐█▌▐▀▀▄ ▐█▀▀█▄ ▄█▀▄      ▐█.▪▐█·▐█ ▌▐▌▐█·▐▀▀▪▄ ",
-"  ▐█▌·▐█▄█▌▐█•█▌██▄▪▐█▐█▌.▐▌     ▐█▌·▐█▌██ ██▌▐█▌▐█▄▄▌ ",
-"  ▀▀▀  ▀▀▀ .▀  ▀·▀▀▀▀  ▀█▄▀▪     ▀▀▀ ▀▀▀▀▀  █▪▀▀▀ ▀▀▀  ",
-"                                                       ",
-"            Has that ever happened to you?             ",
+" 				       			 ",
+" ▄▄▄▄▄▄• ▄▌▄▄▄  ▄▄▄▄·            ▄▄▄▄▄▪  • ▌ ▄ ·. ▄▄▄ . ",
+" •██  █▪██▌▀▄ █·▐█ ▀█▪▪          •██  ██ ·██ ▐███▪▀▄.▀· ",
+"  ▐█.▪█▌▐█▌▐▀▀▄ ▐█▀▀█▄ ▄█▀▄       ▐█.▪▐█·▐█ ▌▐▌▐█·▐▀▀▪▄ ",
+"  ▐█▌·▐█▄█▌▐█•█▌██▄▪▐█▐█▌.▐▌      ▐█▌·▐█▌██ ██▌▐█▌▐█▄▄▌ ",
+"  ▀▀▀  ▀▀▀ .▀  ▀·▀▀▀▀  ▀█▄▀▪      ▀▀▀ ▀▀▀▀▀  █▪▀▀▀ ▀▀▀  ",
+"                                                        ",
+"             Has that ever happened to you?             ",
 }
 
 dashboard.section.header.val = turbo_time_splash
 
 dashboard.section.buttons.val = {
   dashboard.button("e", "New file", ":ene <BAR> startinsert<CR>"),
-  dashboard.button("f", "Find file", "<cmd>lua require('fzf-lua').files()<CR>"),
+  dashboard.button("f", "Find file", ":Telescope find_files<CR>"),
+  dashboard.button("r", "Recent files", ":Telescope oldfiles<CR>"),
   dashboard.button("s", "Settings", ":e $MYVIMRC<CR>"),
   dashboard.button("u", "Update plugins", ":PackerUpdate<CR>"),
   dashboard.button("q", "Quit", ":qa<CR>"),
