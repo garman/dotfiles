@@ -21,8 +21,9 @@ end
 
 return packer.startup(function()
   use "goolord/alpha-nvim"
+  use { "ibhagwan/fzf-lua",
+    requires = { "nvim-tree/nvim-web-devicons" }
+  }
+  use { "junegunn/fzf", run = "./install --bin" }
   use "wbthomason/packer.nvim"
-  use "nvim-lua/plenary.nvim"
-  use "nvim-telescope/telescope.nvim"
-  use "nvim-treesitter/nvim-treesitter"
 end)
