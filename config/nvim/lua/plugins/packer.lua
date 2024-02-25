@@ -26,5 +26,19 @@ return packer.startup(function()
   }
   use { "junegunn/fzf", run = "./install --bin" }
   use "github/copilot.vim"
+  use "projekt0n/github-nvim-theme"
+  use "tpope/vim-commentary"
+  use "tpope/vim-rails"
+  use "tpope/vim-surround"
+  use "tpope/vim-endwise"
+  use "dense-analysis/ale"
+  use 'preservim/nerdtree'
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/nvim-cmp"
+  use "nvim-treesitter/nvim-treesitter"
+  use "tpope/vim-fugitive"
+  use "tpope/vim-rhubarb"
   use "wbthomason/packer.nvim"
 end)
