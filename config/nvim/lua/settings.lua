@@ -11,7 +11,6 @@ opt.backspace = { "indent", "eol", "start" }  -- Adds intuitive backspacing
 opt.backup = false                            -- No Backup files
 opt.backupcopy = "yes"                        -- Keeps original creator code
 opt.clipboard = "unnamedplus"
-opt.colorcolumn = { "100", "118" }
 opt.completeopt = { "menuone", "noselect" }
 opt.completeopt:append("menuone")             -- Always show menu
 opt.diffopt:append("vertical")                -- Always use vertical diffs
@@ -56,8 +55,6 @@ opt.wrap = false                              -- Don"t wrap lines
 opt.termguicolors = true
 opt.background = "dark"
 
-cmd "colorscheme github_dark_high_contrast"
-
 exec([[
   augroup YankHighlight
     autocmd!
@@ -68,6 +65,8 @@ exec([[
 cmd [[
   au BufWritePre * :%s/\s\+$//e
   autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
+  colorscheme github_dark_high_contrast
+  highlight ColorColumn ctermbg=0 guibg=lightgrey
 
   au BufEnter * set fo-=c fo-=r fo-=o
   autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
@@ -90,6 +89,11 @@ cmd [[
       \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal g`\"" |
       \ endif
+
+    autocmd BufRead
+      \ callback = function ()
+      \   vim.fn.matchadd('ColorColumn', '\%119v', 100)
+      \ end
   endif
 
   function! s:MkNonExDir(file, buf)
@@ -106,5 +110,3 @@ cmd [[
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
   augroup END
 ]]
-
--- require("nvim-web-devicons").get_icons()
