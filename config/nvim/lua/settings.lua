@@ -56,7 +56,7 @@ opt.wrap = false                              -- Don"t wrap lines
 opt.termguicolors = true
 opt.background = "dark"
 
-cmd "colorscheme github_dark_high_contrast"
+-- cmd "colorscheme github_dark_high_contrast"
 
 exec([[
   augroup YankHighlight
@@ -107,4 +107,4 @@ cmd [[
   augroup END
 ]]
 
-require("nvim-web-devicons").get_icons()
+-- require("nvim-web-devicons").get_icons()

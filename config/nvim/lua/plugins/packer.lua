@@ -21,7 +21,6 @@ end
 
 return packer.startup(function()
   use "goolord/alpha-nvim"
-  use "kyazdani42/nvim-web-devicons"
   use { "ibhagwan/fzf-lua",
     requires = { "nvim-tree/nvim-web-devicons" }
   }
