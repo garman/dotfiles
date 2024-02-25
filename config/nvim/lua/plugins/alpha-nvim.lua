@@ -59,7 +59,7 @@ local garman_splash = {
 }
 
 local turbo_time_splash = {
-" 				       			 ",
+"                                                        ",
 " ▄▄▄▄▄▄• ▄▌▄▄▄  ▄▄▄▄·            ▄▄▄▄▄▪  • ▌ ▄ ·. ▄▄▄ . ",
 " •██  █▪██▌▀▄ █·▐█ ▀█▪▪          •██  ██ ·██ ▐███▪▀▄.▀· ",
 "  ▐█.▪█▌▐█▌▐▀▀▄ ▐█▀▀█▄ ▄█▀▄       ▐█.▪▐█·▐█ ▌▐▌▐█·▐▀▀▪▄ ",
@@ -69,7 +69,38 @@ local turbo_time_splash = {
 "             Has that ever happened to you?             ",
 }
 
-dashboard.section.header.val = turbo_time_splash
+local fifty_five_splash = {
+"                                             ",
+" ·▄▄▄▪  ·▄▄▄▄▄▄▄▄ ▄· ▄▌    ·▄▄▄▪   ▌ ▐·▄▄▄ . ",
+" ▐▄▄·██ ▐▄▄·•██  ▐█▪██▌    ▐▄▄·██ ▪█·█▌▀▄.▀· ",
+" ██▪ ▐█·██▪  ▐█.▪▐█▌▐█▪    ██▪ ▐█·▐█▐█•▐▀▀▪▄ ",
+" ██▌.▐█▌██▌. ▐█▌· ▐█▀·.    ██▌.▐█▌ ███ ▐█▄▄▌ ",
+" ▀▀▀ ▀▀▀▀▀▀  ▀▀▀   ▀ •     ▀▀▀ ▀▀▀. ▀   ▀▀▀  ",
+"                                             ",
+"             I'm doing a thing!              ",
+}
+
+local nachos_splash = {
+"                                   ",
+"  ▐ ▄  ▄▄▄·  ▄▄·  ▄ .▄      .▄▄ ·  ",
+" •█▌▐█▐█ ▀█ ▐█ ▌▪██▪▐█▪     ▐█ ▀.  ",
+" ▐█▐▐▌▄█▀▀█ ██ ▄▄██▀▐█ ▄█▀▄ ▄▀▀▀█▄ ",
+" ██▐█▌▐█ ▪▐▌▐███▌██▌▐▀▐█▌.▐▌▐█▄▪▐█ ",
+" ▀▀ █▪ ▀  ▀ ·▀▀▀ ▀▀▀ · ▀█▄▀▪ ▀▀▀▀  ",
+"                                   ",
+"    What are you talking about?    "
+}
+
+local dashboard_header_options = {
+  turbo_time_splash,
+  fifty_five_splash,
+  nachos_splash,
+}
+math.randomseed(os.clock()*100000000000)
+math.random(); math.random(); math.random()
+local header_choice = math.random(#dashboard_header_options)
+
+dashboard.section.header.val = dashboard_header_options[header_choice]
 
 dashboard.section.buttons.val = {
   dashboard.button("e", "New file", ":ene <BAR> startinsert<CR>"),

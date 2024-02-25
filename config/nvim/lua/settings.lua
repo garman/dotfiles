@@ -5,6 +5,7 @@ local g = vim.g
 local opt = vim.opt
 
 g.mapleader = ","
+g.floaterm_wintype = "split"
 
 opt.autoindent = true                         -- Copy indent from previous line
 opt.backspace = { "indent", "eol", "start" }  -- Adds intuitive backspacing
