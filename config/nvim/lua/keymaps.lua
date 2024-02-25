@@ -6,7 +6,8 @@ map("n", "<leader><leader>", ":nohl<CR>", default_opts)
 
 map("i", "jk", "<Esc>", {noremap = true})
 
-map("n", ";;", "<cmd>lua require('fzf-lua').files()<CR>", default_opts)
+map("n", "ff", "<cmd>lua require('fzf-lua').files()<CR>", default_opts)
+map("n", "fr", "<cmd>lua require('fzf-lua').oldfiles()<CR>", default_opts)
 
 map("n", "<C-h>", "<C-W><C-H>", default_opts)
 map("n", "<C-j>", "<C-W><C-J>", default_opts)
