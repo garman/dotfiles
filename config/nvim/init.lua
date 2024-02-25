@@ -1,3 +1,5 @@
 require("keymaps")
+require("settings")
 require("plugins.packer")
 require("plugins.alpha-nvim")
+require("plugins.lualine")

@@ -21,10 +21,15 @@ end
 
 return packer.startup(function()
   use "goolord/alpha-nvim"
+  use "kyazdani42/nvim-web-devicons"
   use { "ibhagwan/fzf-lua",
     requires = { "nvim-tree/nvim-web-devicons" }
   }
   use { "junegunn/fzf", run = "./install --bin" }
+  use {
+  'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use "github/copilot.vim"
   use "projekt0n/github-nvim-theme"
   use "tpope/vim-commentary"
@@ -40,5 +45,6 @@ return packer.startup(function()
   use "nvim-treesitter/nvim-treesitter"
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb"
+  use "vim-test/vim-test"
   use "wbthomason/packer.nvim"
 end)

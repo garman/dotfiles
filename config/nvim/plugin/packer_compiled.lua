@@ -74,10 +74,35 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ale = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/ale",
+    url = "https://github.com/dense-analysis/ale"
+  },
   ["alpha-nvim"] = {
     loaded = true,
     path = "/home/codespace/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   fzf = {
     loaded = true,
@@ -89,6 +114,26 @@ _G.packer_plugins = {
     path = "/home/codespace/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
+  nerdtree = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/codespace/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -98,6 +143,41 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/codespace/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-endwise"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-endwise",
+    url = "https://github.com/tpope/vim-endwise"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-rails"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-rails",
+    url = "https://github.com/tpope/vim-rails"
+  },
+  ["vim-rhubarb"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/home/codespace/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   }
 }
 
