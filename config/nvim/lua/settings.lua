@@ -56,7 +56,7 @@ opt.wrap = false                              -- Don"t wrap lines
 opt.termguicolors = true
 opt.background = "dark"
 
--- cmd "colorscheme github_dark_high_contrast"
+cmd "colorscheme github_dark_high_contrast"
 
 exec([[
   augroup YankHighlight
