@@ -11,6 +11,7 @@ opt.backspace = { "indent", "eol", "start" }  -- Adds intuitive backspacing
 opt.backup = false                            -- No Backup files
 opt.backupcopy = "yes"                        -- Keeps original creator code
 opt.clipboard = "unnamedplus"
+opt.colorcolumn = '118'
 opt.completeopt = { "menuone", "noselect" }
 opt.completeopt:append("menuone")             -- Always show menu
 opt.diffopt:append("vertical")                -- Always use vertical diffs
@@ -65,8 +66,7 @@ exec([[
 cmd [[
   au BufWritePre * :%s/\s\+$//e
   autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
-  colorscheme github_dark_high_contrast
-  highlight ColorColumn ctermbg=0 guibg=lightgrey
+  colorscheme github_dark_dimmed
 
   au BufEnter * set fo-=c fo-=r fo-=o
   autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
@@ -89,11 +89,6 @@ cmd [[
       \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal g`\"" |
       \ endif
-
-    autocmd BufRead
-      \ callback = function ()
-      \   vim.fn.matchadd('ColorColumn', '\%119v', 100)
-      \ end
   endif
 
   function! s:MkNonExDir(file, buf)

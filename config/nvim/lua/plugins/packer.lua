@@ -35,14 +35,16 @@ return packer.startup(function()
   use "tpope/vim-rails"
   use "tpope/vim-surround"
   use "tpope/vim-endwise"
+  use 'voldikss/vim-floaterm'
+  use 'vim-ruby/vim-ruby'
+  use "lewis6991/gitsigns.nvim"
   use "dense-analysis/ale"
-  use 'preservim/nerdtree'
+  use "preservim/nerdtree"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-path"
   use "hrsh7th/nvim-cmp"
   use "nvim-treesitter/nvim-treesitter"
-  use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb"
   use "vim-test/vim-test"
   use "wbthomason/packer.nvim"
