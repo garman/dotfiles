@@ -33,3 +33,5 @@ map("n", "gb", "<cmd>FzfLua git_bcommits<CR>", default_opts)
 map("n", "ff", "<cmd>FzfLua files<CR>", default_opts)
 map("n", "fr", "<cmd>FzfLua oldfiles<CR>", default_opts)
 
+-- Ruby/rails related mappings
+cmd "let test#ruby#rspec#executable = 'script/test'"
