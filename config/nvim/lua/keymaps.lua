@@ -36,3 +36,6 @@ map("n", "fr", "<cmd>FzfLua oldfiles<CR>", default_opts)
 
 -- Ruby/rails related mappings
 cmd "let test#ruby#rspec#executable = 'script/test'"
+cmd "let test#strategy = 'floaterm'"
+map("n", "<leader>t", "<cmd>TestNearest<CR>", default_opts)
+map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
