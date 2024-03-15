@@ -75,11 +75,10 @@ cmd [[
   command Term :botright vsplit term://$SHELL
 
   if has("autocmd")
-    autocmd FileType text setlocal textwidth=78
-    autocmd FileType gitcommit setlocal spell nonumber norelativenumber
+    autocmd FileType gitcommit setlocal spell nonumber norelativenumber formatoptions-=t
+    autocmd Filetype markdown setlocal spell formatoptions-=t
     autocmd FileType netrw setl bufhidden=delete
     autocmd FileType netrw setlocal nonumber relativenumber
-    autocmd FileType markdown setlocal spell wrap textwidth=80
     autocmd FileType qf setlocal cc=""
     autocmd FileType rust setlocal cc=90
     autocmd BufNewFile,BufRead *.json.jbuilder set ft=ruby
