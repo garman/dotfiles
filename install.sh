@@ -59,4 +59,4 @@ mv garman.zsh-theme ~/.oh-my-zsh/themes/
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
 
-scripts/install_gh_extensions
+scripts/install_gh_extensions.sh
