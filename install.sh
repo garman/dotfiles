@@ -58,3 +58,5 @@ HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete
 mv garman.zsh-theme ~/.oh-my-zsh/themes/
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
+
+scripts/install_gh_extensions
