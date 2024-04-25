@@ -32,10 +32,11 @@ install_dotfiles() {
   output "Installing dotfiles..."
 
   dotfiles=(
-    config
+    config/nvim
     gitconfig
     tmux.conf
     zshrc
+    bash_profile
   )
 
   for val in "${dotfiles[@]}"; do
@@ -59,7 +60,7 @@ install_npm_packages() {
     npm list --depth 1 --global $pkg >/dev/null 2>&1 || npm_packages_not_installed+=($pkg)
   done
 
-  [ ${#npm_packages_not_installed[@]} -eq 0 ] || /opt/homebrew/bin/npm install -g "${npm_packages_not_installed[@]}"
+  [ ${#npm_packages_not_installed[@]} -eq 0 ] || /usr/local/bin/npm install -g "${npm_packages_not_installed[@]}"
 
   all_done
 }
@@ -67,7 +68,7 @@ install_npm_packages() {
 initialize_neovim() {
   output "Initializing neovim..."
 
-  HEADLESS_NEOVIM=1 /opt/homebrew/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+  HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
   all_done
 }
