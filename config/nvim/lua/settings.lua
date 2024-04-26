@@ -67,7 +67,7 @@ exec([[
 cmd [[
   au BufWritePre * :%s/\s\+$//e
   autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
-  colorscheme github_dark_dimmed
+  colorscheme pastelnight
 
   au BufEnter * set fo-=c fo-=r fo-=o
   autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0

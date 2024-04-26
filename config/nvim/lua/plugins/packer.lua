@@ -31,6 +31,7 @@ return packer.startup(function()
   }
   use "github/copilot.vim"
   use "projekt0n/github-nvim-theme"
+  use "pauchiner/pastelnight.nvim"
   use "tpope/vim-commentary"
   use "tpope/vim-rails"
   use "tpope/vim-surround"
