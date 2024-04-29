@@ -8,6 +8,8 @@ map("i", "jk", "<Esc>", { noremap = true })
 map("n", ";", ":", default_opts)
 map("n", "nt", "<cmd>NERDTreeToggle<CR>", default_opts)
 map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
+map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
+map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)
 
 -- window navigation
 map("n", "<C-h>", "<C-W><C-H>", { noremap = true })
