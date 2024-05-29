@@ -55,7 +55,7 @@ ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 
 HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-mv garman.zsh-theme ~/.oh-my-zsh/themes/
+cp garman.zsh-theme ~/.oh-my-zsh/themes/
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
 
