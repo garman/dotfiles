@@ -52,3 +52,5 @@ map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
 
 -- Gitsigns
 map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
+map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
+map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)

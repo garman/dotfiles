@@ -49,4 +49,5 @@ return packer.startup(function()
   use "tpope/vim-rhubarb"
   use "vim-test/vim-test"
   use "wbthomason/packer.nvim"
+  use "f-person/git-blame.nvim"
 end)

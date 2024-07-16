@@ -75,6 +75,13 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+if [[ -z "$CODESPACES" ]]
+then
+  export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
+else
+  export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+fi
+
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 
@@ -103,3 +110,5 @@ source ~/.bash_profile
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(rbenv init - zsh)"
