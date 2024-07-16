@@ -7,23 +7,52 @@ local opt = vim.opt
 g.mapleader = ","
 g.floaterm_wintype = "split"
 
+-- linenumbers
+opt.relativenumber = true
+opt.number = true
+
+-- tabs & indentation
+opt.tabstop = 4
+opt.expandtab = true
 opt.autoindent = true                         -- Copy indent from previous line
+opt.shiftwidth = 2                            -- 2 spaces when indented
+opt.smartindent = true                        -- Auto insert extra indent level in certain cases
+opt.smarttab = true                           -- Prevents tab/space issues
+
+-- formatting
+opt.wrap = false                              -- Don"t wrap lines
+opt.termguicolors = true
+opt.background = "dark"                       -- Colorschemes default to dark
+opt.signcolumn = "yes"                        -- Show sign colum so that text doesn't shift
+opt.cursorline = true                         -- Highlight current line
+cmd("colorscheme tokyonight")
+
+-- searchsettings
+opt.smartcase = true                          -- Enable case sensitive search only when uppercase characters present
+opt.ignorecase = true                         -- Ignore case in searches
+
+-- backspace
 opt.backspace = { "indent", "eol", "start" }  -- Adds intuitive backspacing
+
+--clipboard
+opt.clipboard:append("unnamedplus")           -- Use system clipboard as default register
+
+-- split windows
+opt.splitbelow = true                         -- Open hsplits below rather than above
+opt.splitright = true                         -- Open vsplits to the right rather than left
+
 opt.backup = false                            -- No Backup files
 opt.backupcopy = "yes"                        -- Keeps original creator code
-opt.clipboard = "unnamedplus"
 opt.colorcolumn = '118'
 opt.completeopt = { "menuone", "noselect" }
 opt.completeopt:append("menuone")             -- Always show menu
 opt.diffopt:append("vertical")                -- Always use vertical diffs
 opt.errorbells = false                        -- Obvious
-opt.expandtab = true
 opt.fillchars:append("vert:│")                -- Use tall pipe in split separators
 opt.foldmethod = "marker"
 opt.hidden = false                            -- Don't hide unsaved buffers
 opt.history = 100                             -- Keep 100 lines of command line history
 opt.hlsearch = true                           -- Highlights search
-opt.ignorecase = true                         -- Ignore case in searches
 opt.incsearch = true                          -- Searches for text as entered
 opt.laststatus = 2                            -- Always show statusline
 opt.lazyredraw = true
@@ -32,30 +61,19 @@ opt.list = true                               -- Don't show listchars
 opt.listchars = { tab = "»·", trail = "·" }
 opt.matchtime = 0                             -- Fix neovim match lag
 opt.mouse = "a"
-opt.number = true                             -- Show regular numbers
 opt.ruler = true                              -- Show the ruler
 opt.scrolloff = 5                             -- Always show 5 lines above/blow cursor
 opt.shell = "/bin/zsh"                        -- use zsh for the `:terminal` shells
-opt.shiftwidth = 2                            -- 2 spaces when indented
 opt.shortmess = "fmnrWIcF"                    -- Customize what vim yells at you
 opt.shortmess:append("sI")
 opt.showcmd = false                           -- Don"t show command in the last line of the screen
 opt.showmatch = true                          -- Highlight matching paren/brace/bracket
-opt.smartcase = true                          -- Enable case sensetive search only when uppercase characters present
-opt.smartindent = true                        -- Auto insert extra indent level in certain cases
-opt.smarttab = true                           -- Prevents tab/space issues
-opt.splitbelow = true                         -- Open hsplits below rather than above
-opt.splitright = true                         -- Open vsplits to the right rather than left
 opt.swapfile = false                          -- No swap
 opt.synmaxcol = 180                           -- Prevents segfaults and slow rendering
-opt.tabstop = 4
 opt.tags = ".git/tags"                        -- Where to find tags
 opt.undolevels = 500                          -- More undo
 opt.wildignorecase = true                     -- Case insensitive completions
 opt.wildmenu = true
-opt.wrap = false                              -- Don"t wrap lines
-opt.termguicolors = true
-opt.background = "dark"
 
 exec([[
   augroup YankHighlight
@@ -66,8 +84,7 @@ exec([[
 
 cmd [[
   au BufWritePre * :%s/\s\+$//e
-  autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
-  colorscheme github_dark_dimmed
+  autocmd TermOpen * setlocal listchars= nocursorline
 
   au BufEnter * set fo-=c fo-=r fo-=o
   autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
@@ -75,10 +92,10 @@ cmd [[
   command Term :botright vsplit term://$SHELL
 
   if has("autocmd")
-    autocmd FileType gitcommit setlocal spell nonumber norelativenumber formatoptions-=t
+    autocmd FileType gitcommit setlocal spell formatoptions-=t
     autocmd Filetype markdown setlocal spell formatoptions-=t
     autocmd FileType netrw setl bufhidden=delete
-    autocmd FileType netrw setlocal nonumber relativenumber
+    autocmd FileType netrw setlocal
     autocmd FileType qf setlocal cc=""
     autocmd FileType rust setlocal cc=90
     autocmd BufNewFile,BufRead *.json.jbuilder set ft=ruby

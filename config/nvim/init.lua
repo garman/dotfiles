@@ -1,4 +1,5 @@
 require("plugins.packer")
+require("plugins.colorscheme")
 
 require("settings")
 require("keymaps")
