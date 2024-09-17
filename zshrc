@@ -111,4 +111,6 @@ source ~/.bash_profile
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [[ -z "$CODESPACES" ]]; then
 eval "$(rbenv init - zsh)"
+fi
