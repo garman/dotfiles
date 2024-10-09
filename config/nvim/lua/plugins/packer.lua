@@ -21,6 +21,7 @@ end
 
 return packer.startup(function()
   use "goolord/alpha-nvim"
+  use "christoomey/vim-tmux-navigator"
   use { "ibhagwan/fzf-lua",
     requires = { "nvim-tree/nvim-web-devicons" }
   }
@@ -30,8 +31,7 @@ return packer.startup(function()
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use "github/copilot.vim"
-  use "projekt0n/github-nvim-theme"
-  use "pauchiner/pastelnight.nvim"
+  use "folke/tokyonight.nvim"
   use "tpope/vim-commentary"
   use "tpope/vim-rails"
   use "tpope/vim-surround"

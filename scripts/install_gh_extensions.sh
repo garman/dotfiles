@@ -5,3 +5,5 @@ gh ext install github/gh-projects
 gh ext install samcoe/gh-repo-explore
 gh ext install yuler/gh-todo
 gh ext install rneatherway/gh-slack
+gh ext install dlvhdr/gh-dash
+gh ext install github/gh-copilot

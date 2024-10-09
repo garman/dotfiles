@@ -1,4 +1,5 @@
 require("plugins.packer")
+require("plugins.colorscheme")
 
 if not vim.env.HEADLESS_NEOVIM then
   require("settings")

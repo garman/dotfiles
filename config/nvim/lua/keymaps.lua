@@ -2,26 +2,34 @@ local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local cmd = vim.cmd
 
-map("n", "<leader><leader>", "<cmd>nohl<CR>", default_opts)
+vim.g.mapleader = " "
+
+-- Clear search highlights
+map("n", "<leader>nh", "<cmd>nohl<CR>", default_opts)
+
+-- increment/decrement numbers
+map("n", "<leader>+", "<C-a>", default_opts) -- increment
+map("n", "<leader>-", "<C-x>", default_opts) -- decrement
 
 map("i", "jk", "<Esc>", { noremap = true })
 map("n", ";", ":", default_opts)
-map("n", "nt", "<cmd>NERDTreeToggle<CR>", default_opts)
-map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
-map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
-map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)
 
--- window navigation
-map("n", "<C-h>", "<C-W><C-H>", { noremap = true })
-map("n", "<C-j>", "<C-W><C-J>", default_opts)
-map("n", "<C-k>", "<C-W><C-K>", default_opts)
-map("n", "<C-l>", "<C-W><C-L>", default_opts)
+-- File explorer
+map("n", "<leader>ee", "<cmd>NERDTreeToggle<CR>", default_opts)
+map("n", "<leader>ef", "<cmd>NERDTreeFind<CR>", default_opts)
+map("n", "<leader>er", "<cmd>NERDTreeToggle<CR>", default_opts)
 
--- tab related mappings
-map("n", "<leader>t", "<cmd>tabnew<CR>", default_opts)
-map("n", "<C-t>", "<cmd>tabnew<CR>", default_opts)
-map("n", "<Tab>", "<cmd>tabnext<CR>", default_opts)
-map("n", "<S-Tab>", "<cmd>tabprevious<CR>", default_opts)
+map("n", "<leader>sv", "<C-w>v", default_opts) -- split vertically
+map("n", "<leader>sh", "<C-w>s", default_opts) -- split horizontally
+map("n", "<leader>se", "<C-w>=", default_opts) -- make splits equal size
+map("n", "<leader>sx", "<cmd>close<CR>", default_opts) -- close current split
+
+-- tab management
+map("n", "<leader>to", "<cmd>tabnew<CR>", default_opts)
+map("n", "<leader>tx", "<cmd>tabclose<CR>", default_opts)
+map("n", "<leader>tn", "<cmd>tabnext<CR>", default_opts)
+map("n", "<leader>tp", "<cmd>tabprevious<CR>", default_opts)
+map("n", "<leader>tf", "<cmd>tabnew %<CR>", default_opts) -- open current buffer in new tab
 
 -- searching for words across files using fzf-lua
 map("n", "fd", "<cmd>FzfLua grep<CR>", default_opts)
@@ -41,3 +49,8 @@ cmd "let test#ruby#rspec#executable = 'script/test'"
 cmd "let test#strategy = 'floaterm'"
 map("n", "<leader>t", "<cmd>TestNearest<CR>", default_opts)
 map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
+
+-- Gitsigns
+map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
+map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
+map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)
