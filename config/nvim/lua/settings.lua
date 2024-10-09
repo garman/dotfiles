@@ -80,7 +80,7 @@ cmd [[
     autocmd FileType netrw setl bufhidden=delete
     autocmd FileType netrw setlocal nonumber relativenumber
     autocmd FileType qf setlocal cc=""
-    autocmd FileType rust setlocal cc=90
+    autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
     autocmd BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
     autocmd BufRead,BufNewFile *.es6 setfiletype javascript
