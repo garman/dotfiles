@@ -40,6 +40,8 @@ return packer.startup(function()
   use 'vim-ruby/vim-ruby'
   use "lewis6991/gitsigns.nvim"
   use "dense-analysis/ale"
+  use "leafgarland/typescrip-vim"
+  use "peitalin/vim-jsx-typescript"
   use "preservim/nerdtree"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-nvim-lsp"
