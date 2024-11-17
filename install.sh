@@ -37,10 +37,8 @@ rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
 ln -s $(pwd)/gitmessage $HOME/.gitmessage
 ln -s $(pwd)/gitconfig $HOME/.gitconfig
-ln -s $(pwd)/bash_profile $HOME/.bash_profile
 mkdir -p $HOME/.config/gh
 ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
-git config commit.gpgsign true
 
 rm -rf $HOME/.config
 mkdir $HOME/.config
@@ -49,9 +47,6 @@ ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 ### Install vim-plug
 # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 #       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-### Install NeoVim plugins
-# nvim --headless +PlugInstall +qa
 
 HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 

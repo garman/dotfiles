@@ -1,8 +1,20 @@
 [alias]
   co = checkout
   sno = show --name-only HEAD
-  lg = log --color --graph --pretty=format: '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  st = status -s
+  hist = log --format='%C(green)%h%Creset (%ar) %C(magenta)%an%Creset - %s%C(red)%d%Creset' --graph
+  br = branch --sort=committerdate
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  csv = commit -S -v
+  aa = add --all
 [commit]
   gpgsign = true
 [user]
 	email = danielrgarman@gmail.com
+	name = Daniel Garman
+[github]
+	user = garman
+[color]
+	ui = true
+[init]
+	defaultBranch = main

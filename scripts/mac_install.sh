@@ -36,7 +36,6 @@ install_dotfiles() {
     gitconfig
     tmux.conf
     zshrc
-    bash_profile
   )
 
   for val in "${dotfiles[@]}"; do
