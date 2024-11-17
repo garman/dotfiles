@@ -12,6 +12,7 @@ aliases:
     pf: cs ports forward 80:80
     prl: pr view --json url
     todos: issue list -R garman/notes -l todo
+    qn: issue list -R garman/notes -l 'quick note' --json title,number
 
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
 http_unix_socket:
