@@ -24,6 +24,8 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
+sudo apt-get --assume-yes install silversearcher-ag fuse
+
 # install latest neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 sudo chmod u+x nvim.appimage
