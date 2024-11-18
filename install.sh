@@ -32,7 +32,7 @@ sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
 # Config git and gh
-ln -s $(pwd)/gitconfig $HOME/.gitconfig
+ln -sf $(pwd)/gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/gh
 ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
 scripts/install_gh_extensions.sh
