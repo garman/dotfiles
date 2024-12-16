@@ -121,6 +121,8 @@ cmd [[
     endif
   endfunction
 
+  au filetype go inoremap <buffer> . .<C-x><C-o>
+
   augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
