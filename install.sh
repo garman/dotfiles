@@ -27,7 +27,6 @@ fi
 sudo apt-get --assume-yes install silversearcher-ag fuse
 
 # Install node 22
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm install 22
 
 # install latest neovim
