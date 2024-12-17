@@ -25,7 +25,7 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
-sudo apt-get --assume-yes install silversearcher-ag fuse fzf python3-neovim
+sudo apt-get --assume-yes install silversearcher-ag fuse fzf python3-neovim ripgrep
 
 # Install node 22
 source /usr/local/share/nvm/nvm.sh
