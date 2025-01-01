@@ -37,6 +37,7 @@ scripts/install_gh_extensions.sh
 
 # Move various dotfiles to various places
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
+ln -s $(pwd)/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 ln -s $(pwd)/vim $HOME/.vim
 rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
