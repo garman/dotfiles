@@ -53,4 +53,6 @@ return packer.startup(function()
   use "wbthomason/packer.nvim"
   use "f-person/git-blame.nvim"
   use "fatih/vim-go"
+  use "SirVer/ultisnips"
+  use "honza/vim-snippets"
 end)

@@ -87,6 +87,8 @@ cmd [[
   autocmd TermOpen * setlocal listchars= nocursorline
 
   let g:ale_linters = { 'ruby': ['rubocop', 'srb', 'rails_best_practices', 'packwerk', 'brakeman'] }
+  let g:go_doc_popup_window = 1
+  let g:UltiSnipsExpandTrigger="<C-e>"
 
   au BufEnter * set fo-=c fo-=r fo-=o
   autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0
@@ -120,6 +122,8 @@ cmd [[
       endif
     endif
   endfunction
+
+  au filetype go inoremap <buffer> . .<C-x><C-o>
 
   augroup BWCCreateDir
     autocmd!

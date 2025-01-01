@@ -14,6 +14,7 @@ PACKAGES_NEEDED="\
     silversearch-ag \
     fuse \
     ripgrep \
+    fzf \
     libfuse2"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
@@ -24,13 +25,24 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
+sudo apt-get --assume-yes install silversearcher-ag fuse fzf python3-neovim ripgrep
+
+# Install node 22
+source /usr/local/share/nvm/nvm.sh
+nvm install 22
+
 # install latest neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
+# Install tmux
+wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
+sudo chmod u+x tmux.appimage
+sudo mv tmux.appimage /usr/local/bin/tmux
+
 # Config git and gh
-ln -s $(pwd)/gitconfig $HOME/.gitconfig
+ln -sf $(pwd)/gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/gh
 ln -s $(pwd)/gh_config.yml $HOME/.config/gh/.config.yml
 scripts/install_gh_extensions.sh
