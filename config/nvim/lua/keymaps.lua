@@ -11,6 +11,7 @@ map("n", "<leader>nh", "<cmd>nohl<CR>", default_opts)
 map("n", "<leader>+", "<C-a>", default_opts) -- increment
 map("n", "<leader>-", "<C-x>", default_opts) -- decrement
 
+-- QoL improvements
 map("i", "jk", "<Esc>", { noremap = true })
 map("n", ";", ":", default_opts)
 
@@ -19,6 +20,7 @@ map("n", "<leader>ee", "<cmd>NERDTreeToggle<CR>", default_opts)
 map("n", "<leader>ef", "<cmd>NERDTreeFind<CR>", default_opts)
 map("n", "<leader>er", "<cmd>NERDTreeToggle<CR>", default_opts)
 
+-- window splits
 map("n", "<leader>sv", "<C-w>v", default_opts) -- split vertically
 map("n", "<leader>sh", "<C-w>s", default_opts) -- split horizontally
 map("n", "<leader>se", "<C-w>=", default_opts) -- make splits equal size
@@ -44,16 +46,16 @@ map("n", "gb", "<cmd>FzfLua git_bcommits<CR>", default_opts)
 map("n", "ff", "<cmd>FzfLua files<CR>", default_opts)
 map("n", "fr", "<cmd>FzfLua oldfiles<CR>", default_opts)
 
+-- Git blaming things
+map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
+map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
+map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)
+
 -- Ruby/rails related mappings
 cmd "let test#ruby#rspec#executable = 'script/test'"
 cmd "let test#strategy = 'floaterm'"
 map("n", "<leader>t", "<cmd>TestNearest<CR>", default_opts)
 map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
 
--- Gitsigns
-map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
-map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
-map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)
-
 -- Golang
-map("n", "<leader>t", "<Plug>(go-test)", default_opts)
+map("n", "<leader>gt", "<Plug>(go-test)", default_opts)

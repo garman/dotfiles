@@ -6,7 +6,10 @@ local opt = vim.opt
 
 g.mapleader = ","
 g.floaterm_wintype = "split"
+
+-- Gitblame config
 g.gitblame_highlight_group = "Question"
+g.gitblame_display_virtual_text = 0
 
 -- linenumbers
 opt.relativenumber = true
