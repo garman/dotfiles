@@ -59,3 +59,4 @@ map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
 
 -- Golang
 map("n", "<leader>gt", "<Plug>(go-test)", default_opts)
+map("n", "<leader>gl", "<Plug>(go-lint)", default_opts)
