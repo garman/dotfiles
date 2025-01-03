@@ -30,7 +30,6 @@ return packer.startup(function()
   'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use "github/copilot.vim"
   use "folke/tokyonight.nvim"
   use "tpope/vim-commentary"
   use "tpope/vim-rails"
@@ -43,15 +42,29 @@ return packer.startup(function()
   use "leafgarland/typescript-vim"
   use "peitalin/vim-jsx-typescript"
   use "preservim/nerdtree"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/nvim-cmp"
   use "nvim-treesitter/nvim-treesitter"
   use "tpope/vim-rhubarb"
   use "vim-test/vim-test"
   use "wbthomason/packer.nvim"
   use "f-person/git-blame.nvim"
-  use "fatih/vim-go"
+
+  -- LSP and autocomplete
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use { 'hrsh7th/nvim-cmp',
+    requires = { "L3MON4D3/LuaSnip" }
+  }
+  use "zbirenbaum/copilot-cmp"
+  use "zbirenbaum/copilot.lua"
+  use "saadparwaiz1/cmp_luasnip"
+  use "rafamadriz/friendly-snippets"
+  -- End LSP and autocomplete
+
+  -- Golang
+  use { "fatih/vim-go", run = "vim.cmd.GoInstallBinaries()" }
   use "benmills/vim-golang-alternate"
+  -- End Golang
 end)
