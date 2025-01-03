@@ -36,11 +36,12 @@ map("n", "<leader>tf", "<cmd>tabnew %<CR>", default_opts) -- open current buffer
 -- searching for words across files using fzf-lua
 map("n", "fd", "<cmd>FzfLua grep<CR>", default_opts)
 map("n", "fc", "<cmd>FzfLua grep_cWORD<CR>", default_opts)
+map("n", "fv", "<cmd>FzfLua grep_visual<CR>", default_opts)
 
 -- git related mappings using fzf-lua
 map("n", "gs", "<cmd>FzfLua git_status<CR>", default_opts)
-map("n", "gc", "<cmd>FzfLua git_commits<CR>", default_opts)
-map("n", "gb", "<cmd>FzfLua git_bcommits<CR>", default_opts)
+map("n", "gcom", "<cmd>FzfLua git_commits<CR>", default_opts)
+map("n", "gbcom", "<cmd>FzfLua git_bcommits<CR>", default_opts)
 
 -- file related mappings using fzf-lua
 map("n", "ff", "<cmd>FzfLua files<CR>", default_opts)
