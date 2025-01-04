@@ -30,7 +30,10 @@ return packer.startup(function()
   'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use "folke/tokyonight.nvim"
+  -- Colors
+  -- use "folke/tokyonight.nvim"
+  use { "rose-pine/neovim", name = "rose-pine" }
+
   use "tpope/vim-commentary"
   use "tpope/vim-rails"
   use "tpope/vim-surround"

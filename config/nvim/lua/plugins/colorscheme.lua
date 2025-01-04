@@ -1,11 +1,21 @@
-local bg = "#011628"
-local bg_dark = "#011423"
+--local bg = "#011628"
+--local bg_dark = "#011423"
+--
+--require("tokyonight").setup {
+--  style = "storm",
+--  styles = {
+--    keywords = { italic = false},
+--    functions = { italic = false},
+--    questions = { italic = false },
+--  }
+--}
 
-require("tokyonight").setup {
-  style = "storm",
+require("rose-pine").setup {
+  variant = "moon",
   styles = {
     keywords = { italic = false},
     functions = { italic = false},
     questions = { italic = false },
   }
 }
+

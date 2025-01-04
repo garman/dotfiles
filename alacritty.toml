@@ -1,3 +1,7 @@
+import = [
+"~/.config/alacritty/themes/rose-pine-moon.toml"
+]
+
 [font]
   normal.family = "Hack Nerd Font Mono"
   italic.family = "Monaspace Radon"
