@@ -49,11 +49,11 @@ scripts/install_gh_extensions.sh
 
 # Move various dotfiles to various places
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
-ln -s $(pwd)/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+ln -s $(pwd)/config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+ln -s $(pwd)/config/alacritty/themes/rose-pine-moon.toml $HOME/.config/alacritty/themes/rose-pine-moon.toml
 ln -s $(pwd)/vim $HOME/.vim
 rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
-cp garman.zsh-theme ~/.oh-my-zsh/themes/
 
 # Config nvim
 rm -rf $HOME/.config
