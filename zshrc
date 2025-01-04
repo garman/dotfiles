@@ -4,7 +4,10 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGE=""
 
-ZSH_THEME="garman"
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+prompt pure
+ZSH_THEME=""
 
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
