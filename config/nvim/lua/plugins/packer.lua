@@ -60,6 +60,8 @@ return packer.startup(function()
   use { 'hrsh7th/nvim-cmp',
     requires = { "L3MON4D3/LuaSnip" }
   }
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "zbirenbaum/copilot-cmp"
   use "zbirenbaum/copilot.lua"
   use "saadparwaiz1/cmp_luasnip"
