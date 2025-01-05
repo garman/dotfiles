@@ -61,6 +61,7 @@ return packer.startup(function()
     requires = { "L3MON4D3/LuaSnip" }
   }
   use { "Saghen/blink.cmp",
+    tag = 'v0.9.0',
     requires = { 'rafamadriz/friendly-snippets' }
   }
   use "williamboman/mason.nvim"
