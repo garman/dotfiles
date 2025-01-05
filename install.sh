@@ -42,6 +42,7 @@ sudo chmod u+x tmux.appimage
 sudo mv tmux.appimage /usr/local/bin/tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 # Config git and gh
 ln -sf $(pwd)/gitconfig $HOME/.gitconfig
