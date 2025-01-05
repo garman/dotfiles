@@ -40,9 +40,6 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
 sudo chmod u+x tmux.appimage
 sudo mv tmux.appimage /usr/local/bin/tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-~/.tmux/plugins/tpm/tpm
-~/.tmux/plugins/tpm/bin/install_plugins
 
 # Config git and gh
 ln -sf $(pwd)/gitconfig $HOME/.gitconfig
@@ -64,7 +61,7 @@ mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-#fpath+=($HOME/.zsh/pure)
+# Pure prompt theme
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
