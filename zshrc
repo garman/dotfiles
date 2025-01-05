@@ -22,12 +22,13 @@ then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
 else
   export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+  fpath+=($HOME/.zsh/pure)
 fi
+
+source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit; promptinit
 prompt pure
-
-source $ZSH/oh-my-zsh.sh
 
 # system
 alias ls='ls -lG'
