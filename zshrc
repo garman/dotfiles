@@ -4,7 +4,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGE=""
 
-ZSH_THEME=""
+ZSH_THEME="muse"
 
 # This makes repository status check for large repositories much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -16,16 +16,11 @@ plugins=(git)
 if [[ -z "$CODESPACES" ]]
 then
   export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
-  fpath+=("$(brew --prefix)/share/zsh/site-functions")
 else
   export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-  fpath+=($HOME/.zsh/pure)
 fi
 
 source $ZSH/oh-my-zsh.sh
-
-autoload -U promptinit; promptinit
-prompt pure
 
 # system
 alias ls='ls -lG'
