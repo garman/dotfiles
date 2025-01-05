@@ -4,9 +4,6 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGE=""
 
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-autoload -U promptinit; promptinit
-prompt pure
 ZSH_THEME=""
 
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
@@ -22,9 +19,13 @@ plugins=(git)
 if [[ -z "$CODESPACES" ]]
 then
   export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
+  fpath+=("$(brew --prefix)/share/zsh/site-functions")
 else
   export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 fi
+
+autoload -U promptinit; promptinit
+prompt pure
 
 source $ZSH/oh-my-zsh.sh
 
