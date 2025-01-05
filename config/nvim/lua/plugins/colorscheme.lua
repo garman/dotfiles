@@ -10,12 +10,10 @@
 --  }
 --}
 
-require("rose-pine").setup {
+require("rose-pine").setup({
   variant = "moon",
-  styles = {
-    keywords = { italic = false},
-    functions = { italic = false},
-    questions = { italic = false },
+  disable_italics = true,
+  highlight_groups = {
+    Comment = { italic = true }
   }
-}
-
+})

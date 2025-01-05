@@ -61,7 +61,7 @@ opt.incsearch = true                          -- Searches for text as entered
 opt.laststatus = 2                            -- Always show statusline
 opt.lazyredraw = true
 opt.linebreak = true
-opt.list = true                               -- Don't show listchars
+opt.list = false                              -- Don't show listchars
 opt.listchars = { tab = "»·", trail = "·" }
 opt.matchtime = 0                             -- Fix neovim match lag
 opt.mouse = "a"
@@ -92,7 +92,6 @@ cmd [[
 
   let g:ale_linters = { 'ruby': ['rubocop', 'srb', 'rails_best_practices', 'packwerk', 'brakeman'] }
   let g:go_doc_popup_window = 1
-  let g:UltiSnipsExpandTrigger="<C-e>"
 
   au BufEnter * set fo-=c fo-=r fo-=o
   autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0

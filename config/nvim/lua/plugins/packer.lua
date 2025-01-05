@@ -60,12 +60,14 @@ return packer.startup(function()
   use { 'hrsh7th/nvim-cmp',
     requires = { "L3MON4D3/LuaSnip" }
   }
+  use { "Saghen/blink.cmp",
+    requires = { 'rafamadriz/friendly-snippets' }
+  }
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "zbirenbaum/copilot-cmp"
   use "zbirenbaum/copilot.lua"
   use "saadparwaiz1/cmp_luasnip"
-  use "rafamadriz/friendly-snippets"
   -- End LSP and autocomplete
 
   -- Golang

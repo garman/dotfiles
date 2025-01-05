@@ -9,4 +9,5 @@ if not vim.env.HEADLESS_NEOVIM then
   require("plugins.lualine")
   require("plugins.gitsigns")
   require("plugins.fzf-lua")
+  require("plugins.blink")
 end
