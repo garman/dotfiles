@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export PAGE=""
+export TERM="xterm-256color"
 
 ZSH_THEME=""
 
