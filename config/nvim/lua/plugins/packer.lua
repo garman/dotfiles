@@ -50,6 +50,7 @@ return packer.startup(function()
   use "vim-test/vim-test"
   use "wbthomason/packer.nvim"
   use "f-person/git-blame.nvim"
+  use "OXY2DEV/markview.nvim"
 
   -- LSP and autocomplete
   use 'neovim/nvim-lspconfig'
