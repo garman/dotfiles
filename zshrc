@@ -27,7 +27,7 @@ else
 fi
 
 source $ZSH/oh-my-zsh.sh
-source ~/.fzf.bash
+[ -z "$ZSH_NAME" ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 autoload -U promptinit; promptinit
 prompt pure
