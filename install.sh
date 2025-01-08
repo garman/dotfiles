@@ -14,7 +14,6 @@ PACKAGES_NEEDED="\
     silversearch-ag \
     fuse \
     ripgrep \
-    fzf \
     libfuse2"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
@@ -25,11 +24,16 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
-sudo apt-get --assume-yes install silversearcher-ag fuse fzf python3-neovim ripgrep
+sudo apt-get --assume-yes install silversearcher-ag fuse python3-neovim ripgrep
 
 # Install node 22
 source /usr/local/share/nvm/nvm.sh
 nvm install 22
+
+# Install fzf
+rm -rf $HOME/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
+$HOME/.fzf/install --all
 
 # install latest neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
