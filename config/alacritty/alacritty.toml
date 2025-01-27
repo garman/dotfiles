@@ -1,6 +1,9 @@
 [env]
   TERM = "xterm-256color"
 
+[window]
+  option_as_alt = "Both"
+
 [general]
   import = ["~/.config/alacritty/themes/rose-pine-moon.toml"]
 
