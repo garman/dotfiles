@@ -48,7 +48,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-gh release download -R zellij-org/zellij --pattern '*.gz'
+curl -LO https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
 tar -xvf zellij-x86_64-unknown-linux-musl.tar.gz
 sudo chmod +x zellij
 
