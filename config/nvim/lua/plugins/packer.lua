@@ -30,6 +30,9 @@ return packer.startup(function()
   'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  use "hiasr/vim-zellij-navigator.nvim"
+
   -- Colors
   -- use "folke/tokyonight.nvim"
   use { "rose-pine/neovim", name = "rose-pine" }
