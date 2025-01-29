@@ -29,7 +29,7 @@ opt.termguicolors = true
 opt.background = "dark"                       -- Colorschemes default to dark
 opt.signcolumn = "yes"                        -- Show sign colum so that text doesn't shift
 opt.cursorline = true                         -- Highlight current line
-cmd("colorscheme rose-pine")
+cmd("colorscheme catppuccin")
 
 -- searchsettings
 opt.smartcase = true                          -- Enable case sensitive search only when uppercase characters present
