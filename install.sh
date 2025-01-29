@@ -48,11 +48,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-curl -LO https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
-tar -xvf zellij-x86_64-unknown-linux-musl.tar.gz
-sudo chmod +x zellij
-sudo mv zellij /usr/local/bin/zellij
-
 # Config git and gh
 ln -sf $(pwd)/gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/gh
