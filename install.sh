@@ -12,7 +12,6 @@ PACKAGES_NEEDED="\
     universtal-ctags \
     tmux \
     silversearch-ag \
-    fuse \
     ripgrep \
     libfuse2"
 
