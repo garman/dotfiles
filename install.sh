@@ -46,8 +46,7 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
 sudo chmod u+x tmux.appimage
 sudo mv tmux.appimage /usr/local/bin/tmux
-mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone -b v2.1.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+git clone https://github.com/catppuccin/tmux ~/.config/tmux/plugins/catppuccin/tmux
 
 # Config git and gh
 ln -sf $(pwd)/gitconfig $HOME/.gitconfig
@@ -72,7 +71,5 @@ HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete
 #fpath+=($HOME/.zsh/pure)
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-
-tmux source ~/.tmux.conf
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
