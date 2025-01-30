@@ -34,9 +34,8 @@ return packer.startup(function()
   use "hiasr/vim-zellij-navigator.nvim"
 
   -- Colors
-  use { "catppuccin/nvim", as = "catppuccin" }
   -- use "folke/tokyonight.nvim"
---  use { "rose-pine/neovim", name = "rose-pine" }
+  use { "rose-pine/neovim", name = "rose-pine" }
 
   use "tpope/vim-commentary"
   use "tpope/vim-rails"
