@@ -35,8 +35,11 @@ rm -rf $HOME/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install --all
 
-# install latest neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+# Install neovim
+sudo modprobe fuse
+sudo groupadd fuse
+sudo usermod -a -G fuse "$(whoami)"
+wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim.appimage
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
