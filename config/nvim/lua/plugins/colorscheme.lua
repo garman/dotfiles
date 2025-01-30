@@ -22,6 +22,8 @@ require("catppuccin").setup {
   flavor = "mocha",
   styles = {
     comments = { "italic" },
-    conditionals = {},
+    keywords = {},
+    functions = {},
+    questions = {},
   }
 }

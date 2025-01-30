@@ -31,6 +31,8 @@ return packer.startup(function()
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use "hiasr/vim-zellij-navigator.nvim"
+
   -- Colors
   use { "catppuccin/nvim", as = "catppuccin" }
   -- use "folke/tokyonight.nvim"
