@@ -10,10 +10,20 @@
 --  }
 --}
 
-require("rose-pine").setup({
-  variant = "moon",
-  disable_italics = true,
-  highlight_groups = {
-    Comment = { italic = true }
+--require("rose-pine").setup({
+--  variant = "moon",
+--  disable_italics = true,
+--  highlight_groups = {
+--    Comment = { italic = true }
+--  }
+--})
+
+require("catppuccin").setup {
+  flavor = "mocha",
+  styles = {
+    comments = { "italic" },
+    keywords = {},
+    functions = {},
+    questions = {},
   }
-})
+}
