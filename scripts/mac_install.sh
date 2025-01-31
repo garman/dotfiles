@@ -99,4 +99,7 @@ install_fzf
 initialize_neovim
 scripts/install_gh_extensions.sh
 
+# ❯ wget -P ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+
+
 teardown
