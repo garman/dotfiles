@@ -46,8 +46,8 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
 sudo chmod u+x tmux.appimage
 sudo mv tmux.appimage /usr/local/bin/tmux
-mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone -b v2.1.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+mkdir -p "$HOME/.tmux"
+git clone https://github.com/catppuccin/tmux "$HOME/.tmux/catppuccin"
 
 # Config git and gh
 ln -sf $(pwd)/gitconfig $HOME/.gitconfig
@@ -58,7 +58,6 @@ scripts/install_gh_extensions.sh
 # Move various dotfiles to various places
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
-ln -s $(pwd)/config/alacritty/themes/rose-pine-moon.toml $HOME/.config/alacritty/themes/rose-pine-moon.toml
 ln -s $(pwd)/vim $HOME/.vim
 rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
@@ -69,7 +68,7 @@ mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
 HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-#fpath+=($HOME/.zsh/pure)
+# Prompt
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
