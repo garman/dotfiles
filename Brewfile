@@ -8,3 +8,4 @@ brew "ruby-build"
 brew "gnupg"
 brew "alacritty" --no-quarantine
 brew "pure"
+# brew "vscode"

@@ -100,6 +100,7 @@ initialize_neovim
 scripts/install_gh_extensions.sh
 
 # ❯ wget -P ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+# https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css
 
 
 teardown
