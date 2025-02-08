@@ -21,11 +21,11 @@ end
 
 return packer.startup(function()
   --use "goolord/alpha-nvim"
-  use "christoomey/vim-tmux-navigator"
+  --use "christoomey/vim-tmux-navigator"
  -- use { "ibhagwan/fzf-lua",
  --   requires = { "nvim-tree/nvim-web-devicons" }
  -- }
-  use { "junegunn/fzf", run = "./install --bin" }
+  --use { "junegunn/fzf", run = "./install --bin" }
   --use {
   --'nvim-lualine/lualine.nvim',
   --  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -36,23 +36,23 @@ return packer.startup(function()
   -- use "folke/tokyonight.nvim"
 --  use { "rose-pine/neovim", name = "rose-pine" }
 
-  use "tpope/vim-commentary"
-  use "tpope/vim-rails"
-  use "tpope/vim-surround"
-  use "tpope/vim-endwise"
-  use 'voldikss/vim-floaterm'
-  use 'vim-ruby/vim-ruby'
-  use "lewis6991/gitsigns.nvim"
-  use "dense-analysis/ale"
-  use "leafgarland/typescript-vim"
-  use "peitalin/vim-jsx-typescript"
-  use "preservim/nerdtree"
-  use "nvim-treesitter/nvim-treesitter"
-  use "tpope/vim-rhubarb"
-  use "vim-test/vim-test"
-  use "wbthomason/packer.nvim"
-  use "f-person/git-blame.nvim"
-  use "OXY2DEV/markview.nvim"
+  -- use "tpope/vim-commentary"
+  --use "tpope/vim-rails"
+  -- use "tpope/vim-surround"
+  -- use "tpope/vim-endwise"
+  -- use 'voldikss/vim-floaterm'
+  -- use 'vim-ruby/vim-ruby'
+ -- use "lewis6991/gitsigns.nvim"
+ -- use "dense-analysis/ale"
+  --use "leafgarland/typescript-vim"
+  --use "peitalin/vim-jsx-typescript"
+  --use "preservim/nerdtree"
+  -- use "nvim-treesitter/nvim-treesitter"
+  --use "tpope/vim-rhubarb"
+  -- use "vim-test/vim-test"
+--  use "wbthomason/packer.nvim"
+ -- use "f-person/git-blame.nvim"
+  --use "OXY2DEV/markview.nvim"
 
   -- LSP and autocomplete
   use 'neovim/nvim-lspconfig'
@@ -75,29 +75,29 @@ return packer.startup(function()
   -- End LSP and autocomplete
 
   -- Golang
-  use { "fatih/vim-go", run = "vim.cmd.GoInstallBinaries()" }
-  use "benmills/vim-golang-alternate"
+--  use { "fatih/vim-go", run = "vim.cmd.GoInstallBinaries()" }
+ -- use "benmills/vim-golang-alternate"
   -- End Golang
 
 --  use { "CopilotC-Nvim/CopilotChat.nvim",
 --    requires = { "github/copilot.vim" }, { "nvim-lua/plenary.nvim", branch = "master" }
 --  }
 
-  use {
-      'KadoBOT/nvim-spotify',
-      requires = 'nvim-telescope/telescope.nvim',
-      config = function()
-          local spotify = require'nvim-spotify'
+  --use {
+  --    'KadoBOT/nvim-spotify',
+  --    requires = 'nvim-telescope/telescope.nvim',
+  --    config = function()
+  --        local spotify = require'nvim-spotify'
 
-          spotify.setup {
-              -- default opts
-              status = {
-                  update_interval = 10000, -- the interval (ms) to check for what's currently playing
-                  format = '%s %t by %a' -- spotify-tui --format argument
-              }
-          }
-      end,
-      run = 'make'
-  }
+  --        spotify.setup {
+  --            -- default opts
+  --            status = {
+  --                update_interval = 10000, -- the interval (ms) to check for what's currently playing
+  --                format = '%s %t by %a' -- spotify-tui --format argument
+  --            }
+  --        }
+  --    end,
+  --    run = 'make'
+  --}
 
 end)
