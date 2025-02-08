@@ -20,19 +20,19 @@ if not present then
 end
 
 return packer.startup(function()
-  use "goolord/alpha-nvim"
+  --use "goolord/alpha-nvim"
   use "christoomey/vim-tmux-navigator"
-  use { "ibhagwan/fzf-lua",
-    requires = { "nvim-tree/nvim-web-devicons" }
-  }
+ -- use { "ibhagwan/fzf-lua",
+ --   requires = { "nvim-tree/nvim-web-devicons" }
+ -- }
   use { "junegunn/fzf", run = "./install --bin" }
-  use {
-  'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
+  --use {
+  --'nvim-lualine/lualine.nvim',
+  --  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  --}
 
   -- Colors
-  use { "catppuccin/nvim", as = "catppuccin" }
+  --use { "catppuccin/nvim", as = "catppuccin" }
   -- use "folke/tokyonight.nvim"
 --  use { "rose-pine/neovim", name = "rose-pine" }
 
@@ -79,9 +79,9 @@ return packer.startup(function()
   use "benmills/vim-golang-alternate"
   -- End Golang
 
-  use { "CopilotC-Nvim/CopilotChat.nvim",
-    requires = { "github/copilot.vim" }, { "nvim-lua/plenary.nvim", branch = "master" }
-  }
+--  use { "CopilotC-Nvim/CopilotChat.nvim",
+--    requires = { "github/copilot.vim" }, { "nvim-lua/plenary.nvim", branch = "master" }
+--  }
 
   use {
       'KadoBOT/nvim-spotify',
