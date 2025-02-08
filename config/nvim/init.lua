@@ -23,7 +23,7 @@ require("lazy").setup({
   --  -- import your plugins
     { import = "plugins" },
   },
-  colorscheme = { "catppuccin-mocha" },
+  colorscheme = { "catppuccin-macchiato" },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   -- automatically check for plugin updates

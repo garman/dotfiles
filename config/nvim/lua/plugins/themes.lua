@@ -1,5 +1,5 @@
 local function footer()
-  datetime = os.date("%Y/%m/%d %I:%M %p", os.time() + 2 * 60 * 60 )
+  datetime = os.date("%Y/%m/%d %I:%M %p", os.time())
   return datetime
 end
 
@@ -122,14 +122,13 @@ return {
     config = function()
       require("catppuccin").setup {
         background = {
-          dark = "mocha"
+          dark = "macchiato"
         },
         styles = {
           comments = { "italic" },
           conditionals = {},
         }
       }
-      vim.cmd([[colorscheme blue]])
     end
   },
 

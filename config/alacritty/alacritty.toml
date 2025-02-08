@@ -5,7 +5,7 @@
   option_as_alt = "Both"
 
 [general]
-  import = ["~/.config/alacritty/themes/rose-pine-moon.toml"]
+  import = ["~/.config/alacritty/catppuccin-macchiato.toml"]
 
 [font]
   normal.family = "Hack Nerd Font Mono"
