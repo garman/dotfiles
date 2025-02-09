@@ -44,8 +44,8 @@ map("n", "gcom", "<cmd>FzfLua git_commits<CR>", default_opts)
 map("n", "gbcom", "<cmd>FzfLua git_bcommits<CR>", default_opts)
 
 -- file related mappings using fzf-lua
-map("n", "ff", "<cmd>FzfLua files<CR>", default_opts)
-map("n", "fr", "<cmd>FzfLua oldfiles<CR>", default_opts)
+map("n", "ff", ":FzfLua files<CR>", default_opts)
+map("n", "fr", ":FzfLua oldfiles<CR>", default_opts)
 
 -- Git blaming things
 map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
@@ -59,5 +59,5 @@ map("n", "<leader>t", "<cmd>TestNearest<CR>", default_opts)
 map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
 
 -- Golang
-map("n", "<leader>gt", "<Plug>(go-test)", default_opts)
-map("n", "<leader>gl", "<Plug>(go-lint)", default_opts)
+map("n", "<leader>gt", ":GoTest<CR>", default_opts)
+map("n", "<leader>gl", ":GoLint<CR>", default_opts)

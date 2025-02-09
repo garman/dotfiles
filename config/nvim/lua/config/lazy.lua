@@ -1,3 +1,4 @@
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -14,31 +15,21 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    import = "plugins",
+    -- import your plugins
+    -- { import = "plugins" },
   },
-  --  {
-  --  "L3MON4D3/LuaSnip",
-  --  -- follow latest release.
-  --  version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-  --  -- install jsregexp (optional!).
-  --  build = "make install_jsregexp"
-  --},
-  -- 'saadparwaiz1/cmp_luasnip',
-  -- "rafamadriz/friendly-snippets",
-  -- LSP
-  -- 'neovim/nvim-lspconfig',
-  -- 'hrsh7th/cmp-nvim-lsp',
-  -- "williamboman/mason.nvim",
-  -- "williamboman/mason-lspconfig.nvim",
-  -- 'gfanto/fzf-lsp.nvim',
-  colorscheme = { "catppuccin-macchiato" },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = { colorscheme = { "catppuccin" } },
+  -- automatically check for plugin updates
   checker = { enabled = true },
 })
-require("settings")
-require("keymaps")
