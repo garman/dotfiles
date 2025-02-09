@@ -58,8 +58,8 @@ local nachos_splash = {
 local random_header = function()
   dashboard_header_options = {
     turbo_time_splash,
-    --fifty_five_splash,
-    --nachos_splash,
+    fifty_five_splash,
+    nachos_splash,
   }
   math.randomseed(os.clock()*100000000000)
   math.random(); math.random(); math.random()
