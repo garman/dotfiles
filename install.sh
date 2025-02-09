@@ -66,10 +66,6 @@ ln -s $(pwd)/zshrc $HOME/.zshrc
 rm -rf $HOME/.config
 mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
-HEADLESS_NEOVIM=1 /usr/local/bin/nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
-# VS Code comments as italic
-cp vscodestyles.css $HOME/.vscodestyles.css
 
 # Prompt
 mkdir -p "$HOME/.zsh"
