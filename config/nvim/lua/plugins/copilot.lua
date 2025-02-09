@@ -5,6 +5,7 @@ return {
       require("copilot").setup({
         cmd = "Copilot",
         event = "InsertEnter",
+        build = ":Copilot auth",
         suggestion = {
           enabled = true,
           auto_trigger = true,
