@@ -48,14 +48,14 @@ return {
       "CopilotChatCommit",
     },
     keys = {
-      { "<leader>aa", "<cmd>CopilotChatToggle<CR>", desc = "Toggle AI Chat" },
-      { "<leader>ae", "<cmd>CopilotChatExplain<CR>", mode = { "v", "n" }, desc = "AI Explain" },
-      { "<leader>ar", "<cmd>CopilotChatReview<CR>", mode = { "v", "n" }, desc = "AI Review" },
-      { "<leader>af", "<cmd>CopilotChatFix<CR>", mode = { "v", "n" }, desc = "AI Fix" },
-      { "<leader>ao", "<cmd>CopilotChatOptimize<CR>", mode = { "v", "n" }, desc = "AI Optimize" },
-      { "<leader>at", "<cmd>CopilotChatTests<CR>", mode = { "v", "n" }, desc = "AI Tests" },
-      { "<leader>am", "<cmd>CopilotChatModels<CR>", mode = { "v", "n" }, desc = "AI Models" },
-      { "<leader>ax", "<cmd>CopilotChatReset<CR>", desc = "AI Chat Reset" },
+      { "<leader>cct", "<cmd>CopilotChatToggle<CR>", desc = "Toggle AI Chat" },
+      { "<leader>cce", "<cmd>CopilotChatExplain<CR>", mode = { "v", "n" }, desc = "AI Explain" },
+      { "<leader>ccr", "<cmd>CopilotChatReview<CR>", mode = { "v", "n" }, desc = "AI Review" },
+      { "<leader>ccf", "<cmd>CopilotChatFix<CR>", mode = { "v", "n" }, desc = "AI Fix" },
+      { "<leader>cco", "<cmd>CopilotChatOptimize<CR>", mode = { "v", "n" }, desc = "AI Optimize" },
+      { "<leader>cctt", "<cmd>CopilotChatTests<CR>", mode = { "v", "n" }, desc = "AI Tests" },
+      { "<leader>ccm", "<cmd>CopilotChatModels<CR>", mode = { "v", "n" }, desc = "AI Models" },
+      { "<leader>ccrr", "<cmd>CopilotChatReset<CR>", desc = "AI Chat Reset" },
     },
   }
 }
