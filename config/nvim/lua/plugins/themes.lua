@@ -103,7 +103,7 @@ local buttons = {
     button("f", "Find file", ":FzfLua files<CR>"),
     button("r", "Recent files", ":FzfLua oldfiles<CR>"),
     button("s", "Settings", ":e $MYVIMRC<CR>"),
-    button("u", "Update plugins", ":PackerUpdate<CR>"),
+    button("u", "Update plugins", ":Lazy update<CR>"),
     button("q", "Quit", ":qa<CR>"),
   },
   opts = {

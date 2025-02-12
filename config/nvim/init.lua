@@ -37,7 +37,6 @@ require("lazy").setup({
   -- "williamboman/mason.nvim",
   -- "williamboman/mason-lspconfig.nvim",
   -- 'gfanto/fzf-lsp.nvim',
-  colorscheme = { "catppuccin-macchiato" },
   checker = { enabled = true },
 })
 require("settings")
