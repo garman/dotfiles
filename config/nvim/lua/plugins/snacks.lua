@@ -100,7 +100,8 @@ return {
       { "<leader>tt",  function() Snacks.terminal.toggle() end, desc = "Toggle terminal" },
       { "<leader>de",  function() Snacks.dim.enable() end, desc = "Toggle terminal" },
       { "<leader>dd",  function() Snacks.dim.disable() end, desc = "Toggle terminal" },
-      { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+      { "ff", function() Snacks.picker.files() end, desc = "Find Files" },
+      { "fr", function () Snacks.picker.recent() end, desc = "Recent Files" },
     },
   },
 }
