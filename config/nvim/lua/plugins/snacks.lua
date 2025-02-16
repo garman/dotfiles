@@ -12,8 +12,11 @@ return {
     indent = { enabled = true },
     picker = { enabled = true },
     animate = { enabled = true },
-    --bigfile = { enabled = true },
+    git = { enabled = true },
+    gitbrowse = { enabled = true },
+    lazygit = { enabled = true },
     --input = { enabled = true },
+    --bigfile = { enabled = true },
     --notifier = { enabled = true },
     --quickfile = { enabled = true },
     --scope = { enabled = true },
@@ -24,6 +27,8 @@ return {
   keys = {
     { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-    { "<leader>r", function() Snacks.explorer.reveal() end, desc = "File Explorer with File" },
+    { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git blame line" },
+    { "<leader>go", function() Snacks.gitbrowse() end, desc = "Open in GitHub" },
+    { "<leader>lg", function() Snacks.lazygit() end, desc = "Git UI" },
   },
 }
