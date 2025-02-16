@@ -15,6 +15,11 @@ map("n", "<leader>-", "<C-x>", default_opts) -- decrement
 map("i", "jk", "<Esc>", { noremap = true })
 map("n", ";", ":", default_opts)
 
+-- File explorer
+map("n", "<leader>ee", "<cmd>NERDTreeToggle<CR>", default_opts)
+map("n", "<leader>ef", "<cmd>NERDTreeFind<CR>", default_opts)
+map("n", "<leader>er", "<cmd>NERDTreeToggle<CR>", default_opts)
+
 -- window splits
 map("n", "<leader>sv", "<C-w>v", default_opts) -- split vertically
 map("n", "<leader>sh", "<C-w>s", default_opts) -- split horizontally
