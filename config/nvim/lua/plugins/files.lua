@@ -1,22 +1,5 @@
 return {
-  {
-    "ibhagwan/fzf-lua",
-    -- optional for icon support
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    -- or if using mini.icons/mini.nvim
-    -- dependencies = { "echasnovski/mini.icons" },
-    opts = {}
-  },
-  { "junegunn/fzf" },
   { "christoomey/vim-tmux-navigator" },
-  { "preservim/nerdtree" },
-  { "f-person/git-blame.nvim" },
-  {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup({ })
-    end,
-  },
   {
     'dense-analysis/ale',
     config = function()
@@ -31,9 +14,7 @@ return {
         }
     end
   },
+  { "vim-test/vim-test" },
   { "tpope/vim-commentary" },
   { "tpope/vim-surround" },
-  { "tpope/vim-endwise" },
-  { 'voldikss/vim-floaterm' },
-  { "vim-test/vim-test" },
 }

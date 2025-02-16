@@ -22,21 +22,6 @@ require("lazy").setup({
   spec = {
     import = "plugins",
   },
-  --  {
-  --  "L3MON4D3/LuaSnip",
-  --  -- follow latest release.
-  --  version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-  --  -- install jsregexp (optional!).
-  --  build = "make install_jsregexp"
-  --},
-  -- 'saadparwaiz1/cmp_luasnip',
-  -- "rafamadriz/friendly-snippets",
-  -- LSP
-  -- 'neovim/nvim-lspconfig',
-  -- 'hrsh7th/cmp-nvim-lsp',
-  -- "williamboman/mason.nvim",
-  -- "williamboman/mason-lspconfig.nvim",
-  -- 'gfanto/fzf-lsp.nvim',
   checker = { enabled = true },
 })
 require("settings")

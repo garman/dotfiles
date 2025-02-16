@@ -15,11 +15,6 @@ map("n", "<leader>-", "<C-x>", default_opts) -- decrement
 map("i", "jk", "<Esc>", { noremap = true })
 map("n", ";", ":", default_opts)
 
--- File explorer
-map("n", "<leader>ee", "<cmd>NERDTreeToggle<CR>", default_opts)
-map("n", "<leader>ef", "<cmd>NERDTreeFind<CR>", default_opts)
-map("n", "<leader>er", "<cmd>NERDTreeToggle<CR>", default_opts)
-
 -- window splits
 map("n", "<leader>sv", "<C-w>v", default_opts) -- split vertically
 map("n", "<leader>sh", "<C-w>s", default_opts) -- split horizontally
@@ -32,25 +27,6 @@ map("n", "<leader>tx", "<cmd>tabclose<CR>", default_opts)
 map("n", "<leader>tn", "<cmd>tabnext<CR>", default_opts)
 map("n", "<leader>tp", "<cmd>tabprevious<CR>", default_opts)
 map("n", "<leader>tf", "<cmd>tabnew %<CR>", default_opts) -- open current buffer in new tab
-
--- searching for words across files using fzf-lua
-map("n", "fd", "<cmd>FzfLua grep<CR>", default_opts)
-map("n", "fc", "<cmd>FzfLua grep_cWORD<CR>", default_opts)
-map("n", "fv", "<cmd>FzfLua grep_visual<CR>", default_opts)
-
--- git related mappings using fzf-lua
-map("n", "gs", "<cmd>FzfLua git_status<CR>", default_opts)
-map("n", "gcom", "<cmd>FzfLua git_commits<CR>", default_opts)
-map("n", "gbcom", "<cmd>FzfLua git_bcommits<CR>", default_opts)
-
--- file related mappings using fzf-lua
-map("n", "ff", ":FzfLua files<CR>", default_opts)
-map("n", "fr", ":FzfLua oldfiles<CR>", default_opts)
-
--- Git blaming things
-map("n", "gibl", "<cmd>Gitsigns blame_line<CR>", default_opts)
-map("n", "gbocu", "<cmd>GitBlameOpenCommitURL<CR>", default_opts)
-map("n", "gbocf", "<cmd>GitBlameOpenFileURL<CR>", default_opts)
 
 -- Ruby/rails related mappings
 cmd "let test#ruby#rspec#executable = 'script/test'"
