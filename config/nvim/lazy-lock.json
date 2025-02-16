@@ -6,8 +6,15 @@
   "fzf-lua": { "branch": "main", "commit": "0a3b70feb05879a8001c51f7a2a42fa52a9e552c" },
   "lazy.nvim": { "branch": "main", "commit": "e5e9bf48211a13d9ee6c1077c88327c49c1ab4a0" },
   "lualine.nvim": { "branch": "master", "commit": "f4f791f67e70d378a754d02da068231d2352e5bc" },
+  "markview.nvim": { "branch": "main", "commit": "f1e2a57388b61fff8e9d7519ce05cee27a59a57e" },
   "nvim-web-devicons": { "branch": "master", "commit": "1020869742ecb191f260818234517f4a1515cfe8" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "snacks.nvim": { "branch": "main", "commit": "b02cb5e8826179b385b870edbda1631213391cf1" },
+  "typescript-vim": { "branch": "master", "commit": "4740441db1e070ef8366c888c658000dd032e4cb" },
+  "vim-go": { "branch": "master", "commit": "6adc82bfef7f9a4b0db78065ae51b8ebb145c355" },
+  "vim-golang-alternate": { "branch": "master", "commit": "dea8a8e9552aea33bf5f6e5420c63fc97da27c76" },
+  "vim-jsx-typescript": { "branch": "master", "commit": "22df470d92651426f2377e3166488672f7b4b4ef" },
+  "vim-rails": { "branch": "master", "commit": "d3954dfe3946c9330dc91b4fbf79ccacb2c626c0" },
+  "vim-ruby": { "branch": "master", "commit": "9139741a9d786144aae66755df030f8e5fab36df" },
   "vim-tmux-navigator": { "branch": "master", "commit": "d847ea942a5bb4d4fab6efebc9f30d787fd96e65" }
 }
