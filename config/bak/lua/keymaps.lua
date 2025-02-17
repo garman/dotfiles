@@ -2,7 +2,7 @@ local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local cmd = vim.cmd
 
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 
 -- Clear search highlights
 map("n", "<leader>nh", "<cmd>nohl<CR>", default_opts)
@@ -29,8 +29,8 @@ map("n", "<leader>tp", "<cmd>tabprevious<CR>", default_opts)
 map("n", "<leader>tf", "<cmd>tabnew %<CR>", default_opts) -- open current buffer in new tab
 
 -- Ruby/rails related mappings
-cmd "let test#ruby#rspec#executable = 'script/test'"
-cmd "let test#strategy = 'floaterm'"
+cmd("let test#ruby#rspec#executable = 'script/test'")
+cmd("let test#strategy = 'floaterm'")
 map("n", "<leader>t", "<cmd>TestNearest<CR>", default_opts)
 map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
 

@@ -1,0 +1,22 @@
+{
+  "CopilotChat.nvim": { "branch": "main", "commit": "7e6583c75f1231ea1eac70e06995dd3f97a58478" },
+  "ale": { "branch": "master", "commit": "699c0dbe80e4395370a4d2dc9816a4d18d85371f" },
+  "catppuccin": { "branch": "main", "commit": "0b2437bcc12b4021614dc41fcea9d0f136d94063" },
+  "copilot.lua": { "branch": "master", "commit": "30321e33b03cb924fdcd6a806a0dc6fa0b0eafb9" },
+  "lazy.nvim": { "branch": "main", "commit": "e5e9bf48211a13d9ee6c1077c88327c49c1ab4a0" },
+  "lualine.nvim": { "branch": "master", "commit": "f4f791f67e70d378a754d02da068231d2352e5bc" },
+  "markview.nvim": { "branch": "main", "commit": "f1e2a57388b61fff8e9d7519ce05cee27a59a57e" },
+  "nvim-web-devicons": { "branch": "master", "commit": "1020869742ecb191f260818234517f4a1515cfe8" },
+  "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
+  "snacks.nvim": { "branch": "main", "commit": "95878ad32aaf310f465a004ef12e9edddf939287" },
+  "typescript-vim": { "branch": "master", "commit": "4740441db1e070ef8366c888c658000dd032e4cb" },
+  "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
+  "vim-go": { "branch": "master", "commit": "6adc82bfef7f9a4b0db78065ae51b8ebb145c355" },
+  "vim-golang-alternate": { "branch": "master", "commit": "dea8a8e9552aea33bf5f6e5420c63fc97da27c76" },
+  "vim-jsx-typescript": { "branch": "master", "commit": "22df470d92651426f2377e3166488672f7b4b4ef" },
+  "vim-rails": { "branch": "master", "commit": "d3954dfe3946c9330dc91b4fbf79ccacb2c626c0" },
+  "vim-ruby": { "branch": "master", "commit": "9139741a9d786144aae66755df030f8e5fab36df" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "vim-test": { "branch": "master", "commit": "0f50a546aef59efe5f1301de8fa9819ecb9fd482" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "d847ea942a5bb4d4fab6efebc9f30d787fd96e65" }
+}
