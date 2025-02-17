@@ -55,8 +55,10 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
-mkdir ~/.config/lazygit
-touch ~/.config/lazygit/config.yml
+
+# Set up config directory
+rm -rf $HOME/.config
+mkdir $HOME/.config
 
 # Config git and gh
 ln -sf $(pwd)/gitconfig $HOME/.gitconfig
@@ -68,13 +70,14 @@ scripts/install_gh_extensions.sh
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 ln -s $(pwd)/vim $HOME/.vim
-rm -f $HOME/.zshrc
-ln -s $(pwd)/zshrc $HOME/.zshrc
+ln -sf $(pwd)/zshrc $HOME/.zshrc
 
 # Config nvim
-rm -rf $HOME/.config
-mkdir $HOME/.config
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
+
+# Init lazygit
+mkdir -p $HOME/.config/lazygit
+touch $HOME/.config/lazygit/config.yml
 
 # Prompt
 mkdir -p "$HOME/.zsh"
