@@ -40,3 +40,7 @@ map("n", "<leader>T", "<cmd>TestFile<CR>", default_opts)
 -- Golang
 map("n", "<leader>gt", ":GoTest<CR>", default_opts)
 map("n", "<leader>gl", ":GoLint<CR>", default_opts)
+
+map("n", "fd", "<cmd>FzfLua grep<CR>", default_opts)
+map("n", "fc", "<cmd>FzfLua grep_cWORD<CR>", default_opts)
+map("n", "fv", "<cmd>FzfLua grep_visual<CR>", default_opts)

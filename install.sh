@@ -13,17 +13,18 @@ PACKAGES_NEEDED="\
     tmux \
     silversearch-ag \
     ripgrep \
+    fd-find \
     libfuse2"
 
-if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
-    if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
-        sudo apt-get update
-    fi
-    sudo echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
-    sudo apt-get -y -q install ${PACKAGES_NEEDED}
+if ! dpkg -s ${PACKAGES_NEEDED} >/dev/null 2>&1; then
+  if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
+    sudo apt-get update
+  fi
+  sudo echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+  sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
 
-sudo apt-get --assume-yes install silversearcher-ag fuse python3-neovim ripgrep
+sudo apt-get --assume-yes install silversearcher-ag fuse python3-neovim ripgrep fd-find
 
 # Install node 22
 source /usr/local/share/nvm/nvm.sh

@@ -9,3 +9,4 @@ brew "gnupg"
 brew "alacritty" --no-quarantine
 brew "pure"
 brew "lazygit"
+brew "fd"
