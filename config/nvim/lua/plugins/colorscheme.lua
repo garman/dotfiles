@@ -20,6 +20,7 @@ return {
         snacks = true,
       },
     },
+    require("catppuccin").setup(opts),
   },
   {
     "LazyVim/LazyVim",
