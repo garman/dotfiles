@@ -1,4 +1,5 @@
 return {
+  { "junegunn/fzf" },
   {
     "ibhagwan/fzf-lua",
     -- optional for icon support
