@@ -24,4 +24,17 @@ return {
   { "vim-test/vim-test" },
   { "tpope/vim-commentary" },
   { "tpope/vim-surround" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    ensure_installed = {
+      "go",
+      "ruby",
+      "diff",
+      "html",
+      "javascript",
+      "query",
+      "tsx",
+      "typescript",
+    },
+  },
 }

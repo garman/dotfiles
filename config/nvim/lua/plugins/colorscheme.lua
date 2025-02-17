@@ -4,18 +4,22 @@ return {
     name = "catppuccin",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
-
-    config = function()
-      require("catppuccin").setup({
-        background = {
-          dark = "macchiato",
-        },
-        styles = {
-          comments = { "italic" },
-          conditionals = {},
-        },
-      })
-    end,
+    opts = {
+      background = {
+        dark = "macchiato",
+      },
+      styles = {
+        comments = { "italic" },
+        conditionals = {},
+      },
+      integrations = {
+        blink_cmp = true,
+        cmp = true,
+        treesitter = true,
+        fzf = true,
+        snacks = true,
+      },
+    },
   },
   {
     "LazyVim/LazyVim",

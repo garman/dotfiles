@@ -81,13 +81,6 @@ return {
         desc = "Git UI",
       },
       {
-        "<leader>.",
-        function()
-          Snacks.scratch()
-        end,
-        desc = "Toggle Scratch Buffer",
-      },
-      {
         "<leader>S",
         function()
           Snacks.scratch.select()
