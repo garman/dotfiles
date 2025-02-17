@@ -74,6 +74,7 @@ ln -sf $(pwd)/zshrc $HOME/.zshrc
 
 # Config nvim
 ln -s "$(pwd)/config/nvim" "$HOME/.config/nvim"
+nvim --headless "+Lazy! sync" +qa
 
 # Init lazygit
 mkdir -p $HOME/.config/lazygit
