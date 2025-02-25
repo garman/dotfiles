@@ -5,6 +5,9 @@ return {
       cmdline = {
         enabled = false,
       },
+      completion = {
+        ghost_text = { enabled = false },
+      },
     },
   },
 }
