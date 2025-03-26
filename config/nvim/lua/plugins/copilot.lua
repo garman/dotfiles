@@ -1,7 +1,7 @@
 return {
   {
     "zbirenbaum/copilot.lua",
-    config = function ()
+    config = function()
       require("copilot").setup({
         cmd = "Copilot",
         event = "InsertEnter",
@@ -12,11 +12,17 @@ return {
         },
         panel = { enabled = false },
 
-        vim.keymap.set("i", "<C-l>", function() require("copilot.suggestion").accept() end, { silent = true, desc = "Accept Copilot Suggestion" }),
-        vim.keymap.set("i", "<C-j>", function() require("copilot.suggestion").next() end, { silent = true, desc = "Next Copilot Suggestion" }),
-        vim.keymap.set("i", "<C-k>", function() require("copilot.suggestion").prev() end, { silent = true, desc = "Previous Copilot Suggestion" }),
+        vim.keymap.set("i", "<C-l>", function()
+          require("copilot.suggestion").accept()
+        end, { silent = true, desc = "Accept Copilot Suggestion" }),
+        vim.keymap.set("i", "<C-j>", function()
+          require("copilot.suggestion").next()
+        end, { silent = true, desc = "Next Copilot Suggestion" }),
+        vim.keymap.set("i", "<C-k>", function()
+          require("copilot.suggestion").prev()
+        end, { silent = true, desc = "Previous Copilot Suggestion" }),
       })
-    end
+    end,
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
@@ -26,7 +32,7 @@ return {
     },
     build = "make tiktoken",
     opts = {
-      model = "o3-mini",
+      model = "claude-3.7-sonnet",
     },
     cmd = {
       "CopilotChat",
@@ -51,5 +57,5 @@ return {
       { "<leader>ccm", "<cmd>CopilotChatModels<CR>", mode = { "v", "n" }, desc = "AI Models" },
       { "<leader>ccrr", "<cmd>CopilotChatReset<CR>", desc = "AI Chat Reset" },
     },
-  }
+  },
 }
