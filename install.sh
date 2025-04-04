@@ -39,7 +39,7 @@ $HOME/.fzf/install --all
 sudo modprobe fuse
 sudo groupadd fuse
 sudo usermod -a -G fuse "$(whoami)"
-wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim.appimage
+wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.appimage
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
