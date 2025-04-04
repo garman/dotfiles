@@ -41,7 +41,7 @@ sudo groupadd fuse
 sudo usermod -a -G fuse "$(whoami)"
 wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.appimage
 sudo chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
 # tmux
 wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
