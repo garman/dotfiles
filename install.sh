@@ -36,12 +36,14 @@ git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install --all
 
 # neovim
-sudo modprobe fuse
-sudo groupadd fuse
-sudo usermod -a -G fuse "$(whoami)"
-wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.appimage
-sudo chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+if [ "$GITHUB_REPOSITORY" != "github/github" ]; then
+  sudo modprobe fuse
+  sudo groupadd fuse
+  sudo usermod -a -G fuse "$(whoami)"
+  wget https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.appimage
+  sudo chmod u+x nvim-linux-x86_64.appimage
+  sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+fi
 
 # tmux
 wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
